@@ -10,17 +10,25 @@ from detection.card_detector import CardDetector
 from detection.card_hand_detector import CardHandDetector
 from detection.elixir_detector import ElixirDetector
 from detection.battle_result_detector import BattleResultDetector
-from detection.tower_hp_detector import TowerHPDetector
+from vision.tower_hp_detector import TowerHPDetector
 from rl.dqn_agent import DQNAgent
 from rl.state_encoder import StateEncoder
 from rl.reward_calculator import RewardCalculator
+from utils.display import GameDisplay
 
-# Main agent who runs the game
 class Agent:
-    def __init__(self, instance_id=0, save_screenshots=False, use_model=False, use_rl=False):
+    def __init__(self, instance_id=0, save_screenshots=False, use_model=False, use_rl=False, verbose=False):
         self.gc = GameController(instance_id)
         self.detector = StateDetector(self.gc.image_matcher)
         self.games_played = 0
+
+        # Display system
+        self.verbose = verbose
+        self.display = GameDisplay(verbose=verbose)
+        self.recent_actions = []
+        self.last_state = None
+        self.enemy_count = 0
+        self.ally_count = 0
 
         # Screenshot saving setup
         self.save_screenshots = save_screenshots
@@ -43,7 +51,7 @@ class Agent:
 
         # Battle state
         self.last_play_time = 0
-        self.play_interval = random.uniform(2.0, 3.0)  # 2-3 seconds between plays
+        self.last_decision_elixir = None 
 
         # YOLO model setup
         self.use_model = use_model
@@ -65,58 +73,105 @@ class Agent:
         self.reward_calculator = None
         self.prev_state = None
         self.prev_action = None
+        self.prev_state_vector = None
+
+        # Tower HP detection (YOLOv8 digit detection)
         self.tower_hp_detector = None
+        if self.use_rl or self.use_model:
+            print("Loading Tower HP detector...")
+            self.tower_hp_detector = TowerHPDetector(
+                model_path="models/tower_hp.pt",
+                confidence=0.3
+            )
+            print("Tower HP detector loaded!")
+
         self.cached_tower_hp = None
         self.last_tower_hp_update = 0
-        self.TOWER_HP_UPDATE_INTERVAL = 2.0  # Update every 2 seconds
+        self.TOWER_HP_UPDATE_INTERVAL = 0.5 
 
-        if self.use_rl:
+        # Tower HP history for detecting false positives (HP bar obstruction)
+        self.tower_hp_history = {
+            'enemy_left_princess': [],
+            'enemy_king': [],
+            'enemy_right_princess': [],
+            'ally_left_princess': [],
+            'ally_king': [],
+            'ally_right_princess': []
+        }
+        self.TOWER_HP_HISTORY_LENGTH = 5  # Track last 5 readings
+
+        # Initialize RL components for both --rl and --model modes
+        if self.use_rl or self.use_model:
+            mode_name = "RL Training System" if self.use_rl else "RL Inference System (--model)"
             print("\n" + "="*60)
-            print("Initializing RL Training System")
+            print(f"Initializing {mode_name}")
             print("="*60)
-
-            # Tower HP detector
-            self.tower_hp_detector = TowerHPDetector()
 
             # State encoder
             self.state_encoder = StateEncoder(grid_rows=32, grid_cols=18, max_cards=4)
 
-            # Action space: 4 cards × 32 rows × 18 cols = 2304 actions
-            self.action_size = 4 * 32 * 18
+            # Action space: 4 cards × 32 rows × 18 cols + 1 "do nothing" = 2305 actions
+
+            self.action_size = 2305
 
             # RL agent
-            self.rl_agent = DQNAgent(
-                state_size=self.state_encoder.state_size,
-                action_size=self.action_size,
-                learning_rate=0.0001,
-                gamma=0.99,
-                epsilon_start=1.0,
-                epsilon_end=0.1,
-                epsilon_decay=0.995,
-                buffer_size=10000,
-                batch_size=64
-            )
+            if self.use_rl:
+                # Training mode: enable exploration and learning
+                self.rl_agent = DQNAgent(
+                    state_size=self.state_encoder.state_size,
+                    action_size=self.action_size,
+                    learning_rate=0.0001,
+                    gamma=0.99,
+                    epsilon_start=1.0,
+                    epsilon_end=0.1,
+                    epsilon_decay=0.998,
+                    buffer_size=10000,
+                    batch_size=64
+                )
+            else:
+                # Inference mode (--model): greedy only, no exploration
+                self.rl_agent = DQNAgent(
+                    state_size=self.state_encoder.state_size,
+                    action_size=self.action_size,
+                    learning_rate=0.0001,
+                    gamma=0.99,
+                    epsilon_start=0.0,  
+                    epsilon_end=0.0,
+                    epsilon_decay=1.0, 
+                    buffer_size=10000,
+                    batch_size=64
+                )
 
-            # Reward calculator
-            self.reward_calculator = RewardCalculator(
-                tower_damage_reward=0.01,
-                tower_destroy_bonus=10.0,
-                elixir_advantage_reward=0.1,
-                win_reward=100.0,
-                loss_penalty=-100.0
-            )
+            # Reward calculator (only used in --rl mode)
+            if self.use_rl:
+                self.reward_calculator = RewardCalculator(
+                    tower_damage_reward=0.01,
+                    tower_destroy_bonus=50.0,
+                    elixir_advantage_reward=0.1,
+                    win_reward=200.0,
+                    loss_penalty=-200.0
+                )
 
             # Try to load checkpoint
             checkpoint_path = "checkpoints/latest.pt"
             if os.path.exists(checkpoint_path):
                 self.rl_agent.load_checkpoint(checkpoint_path)
+                if self.use_model:
+                    print("✓ Loaded RL weights for inference (greedy policy, no exploration)")
             else:
-                print("No checkpoint found - starting fresh")
+                if self.use_rl:
+                    print("No checkpoint found - starting fresh")
+                else:
+                    print("⚠️  No checkpoint found - --model will use untrained network")
 
             print("="*60)
-            print("RL Training Enabled!")
+            if self.use_rl:
+                print("RL Training Enabled!")
+            else:
+                print("RL Inference Enabled!")
             print(f"State size: {self.state_encoder.state_size}")
             print(f"Action size: {self.action_size}")
+            print(f"Epsilon: {self.rl_agent.epsilon:.3f}")
             print("="*60 + "\n")
 
         if self.save_screenshots:
@@ -174,7 +229,10 @@ class Agent:
                 print(f"[CARD] Saved low-confidence card: {filename}")
 
     def play_games(self, num_games=1):
-        print(f"Agent is now playing {num_games} games...")
+        if self.verbose:
+            print(f"Agent is now playing {num_games} games...")
+        else:
+            self.display.clear_screen()
 
         while self.games_played < num_games:
             screenshot = self.gc.take_screenshot()
@@ -182,33 +240,25 @@ class Agent:
             if screenshot is None:
                 continue
 
-            state = self.detector.detect_state(screenshot, verbose=False)
+            state = self.detector.detect_state(screenshot, verbose=self.verbose)
+            state_name = state.name
 
-            # Run YOLO detection if enabled and in battle
-            if self.use_model and state == GameState.IN_BATTLE:
-                # Debug: Save a test screenshot to check what model sees
-                import os
-                debug_dir = "debug_screenshots"
-                os.makedirs(debug_dir, exist_ok=True)
-                if not hasattr(self, '_debug_screenshot_saved'):
-                    cv2.imwrite(f"{debug_dir}/test_detection.png", screenshot)
-                    print(f"[DEBUG] Saved screenshot: {screenshot.shape}")
-                    self._debug_screenshot_saved = True
-
-                detections = self.card_detector.detect(screenshot, verbose=True)
+            # Track state changes
+            if state_name != self.last_state and self.last_state is not None:
+                # Print state change
+                print(f"\n>>> STATE: {self.last_state} → {state_name}\n")
+            self.last_state = state_name
 
             # Save screenshot if enabled and in battle
             if self.save_screenshots and state == GameState.IN_BATTLE:
                 current_time = time.time()
                 if current_time - self.last_save_time >= self.screenshot_interval:
                     self._save_screenshot(screenshot, state)
-
-                    # Detect hand and save unclassified cards from this screenshot
                     hand = self.hand_detector.get_hand(screenshot, verbose=False)
-                    self._save_unclassified_cards(screenshot, hand, confidence_threshold=0.7)
-
+                    self._save_unclassified_cards(screenshot, hand, confidence_threshold=0.9)
                     self.last_save_time = current_time
 
+            # Handle state
             if state == GameState.MAIN_MENU:
                 self.handle_main_menu()
             elif state == GameState.IN_BATTLE:
@@ -216,29 +266,38 @@ class Agent:
             elif state == GameState.BATTLE_END:
                 self.handle_battle_end()
             elif state == GameState.QUEUEING:
-                print("Queueing for battle...")
                 time.sleep(2)
             else:
                 # UNKNOWN or LOADING state
                 time.sleep(1)
     
+    def _add_action(self, action: str):
+        """Add action to recent actions list"""
+        self.recent_actions.append(action)
+        if len(self.recent_actions) > 10:
+            self.recent_actions.pop(0)
+        # Don't use display.log_action - we print actions directly
+
     def handle_main_menu(self):
-        print("Handling main menu:")
+        print(">>> Clicking Battle button\n")
         self.gc.click_battle_button()
         time.sleep(5)
     
     def handle_battle(self, screenshot):
-        # Check for battle result first
-        result = self.result_detector.detect_result(screenshot, threshold=0.8, verbose=False)
-        if result is not None:
-            self.battle_result = result
-            print(f"\n{'='*60}")
-            print(f"[BATTLE END] Result: {result.upper()}")
-            print(f"{'='*60}\n")
-            return
+        # Check for battle result ONLY if elixir bar is NOT visible
+        # This prevents false positives during active battle
+        elixir_visible = self.detector._check_elixir_bar_visible(screenshot)
 
-        # If RL mode is enabled, use RL agent
-        if self.use_rl:
+        if not elixir_visible:
+            # Battle might be ending, check for result screen
+            result = self.result_detector.detect_result(screenshot, threshold=0.92, verbose=self.verbose)
+            if result is not None:
+                self.battle_result = result
+                self.display.log_battle_result(result)
+                return
+
+        # If RL mode OR model mode is enabled, use RL agent
+        if self.use_rl or self.use_model:
             self._handle_battle_rl(screenshot)
             return
 
@@ -247,56 +306,47 @@ class Agent:
             time.sleep(0.5)  # Just monitor, don't play
             return
 
-        # Check elixir on every iteration (as fast as possible)
-        new_elixir = self.elixir_detector.get_elixir(screenshot, verbose=False)
-        if new_elixir is not None:
-            self.current_elixir = new_elixir
-
-        # Detect cards in hand (fast, no delay)
-        self.current_hand = self.hand_detector.get_hand(screenshot, verbose=False)
-
-        # Get all detections if YOLO model is enabled (fast threat detection)
-        all_detections = []
-        enemy_detections = []
-        if self.card_detector:
-            all_detections = self.card_detector.detect(screenshot, verbose=False)
-
-            # Separate enemy detections for placement logic
-            enemy_detections = [d for d in all_detections if d['class_name'].startswith('enemy')]
-
-            # Only place cards if enemies are detected
-            if len(enemy_detections) == 0:
-                return
-
-        # Select best card to play based on situation
-        card_slot, card_info = self._select_best_card(enemy_detections)
-
-        if card_slot is None:
-            # No playable cards - continue checking without delay
+        # Check cooldown before playing
+        current_time = time.time()
+        time_since_last_play = current_time - self.last_play_time
+        if time_since_last_play < self.play_cooldown:
             return
 
-        # Determine placement based on card type and enemy positions
-        row, col = self._get_smart_placement(card_info, enemy_detections)
+        # Print action
+        print(f"\n>>> ACTION: Play {card_name} (slot {card_slot}) at grid [{row},{col}]\n")
 
-        # If no valid placement, don't play
-        if row is None or col is None:
-            return
-
-        # Play the selected card immediately
-        card_name = card_info['card_name']
-        card_type = card_info['card_type']
-        elixir_cost = card_info.get('elixir_cost', '?')
-        print(f"[PLAY] {card_name} ({card_type}, {elixir_cost} elixir) at row {row}, col {col}")
+        action = f"Play {card_name} at [{row},{col}]"
+        self._add_action(action)
 
         self.gc.play_card(card_slot, row, col)
 
+        # Update last play time and decision elixir AFTER successfully playing
+        self.last_play_time = current_time
+
+        # Update last decision elixir to current elixir AFTER playing
+        # This ensures we only update when we actually execute a play
+        if self.current_elixir is not None:
+            self.last_decision_elixir = self.current_elixir
+
         # Small delay after playing to prevent duplicate plays (card animation time)
-        time.sleep(0.5)
+        time.sleep(0.3)
 
     def _handle_battle_rl(self, screenshot):
         """
         RL-enabled battle handler with tower HP tracking and learning
         """
+        # Check for battle result ONLY if elixir bar is NOT visible
+        # This prevents false positives during active battle
+        elixir_visible = self.detector._check_elixir_bar_visible(screenshot)
+
+        if not elixir_visible:
+            # Battle might be ending, check for result screen
+            result = self.result_detector.detect_result(screenshot, threshold=0.92, verbose=self.verbose)
+            if result is not None:
+                self.battle_result = result
+                self.display.log_battle_result(result)
+                return
+
         # Detect all game state components
         current_time = time.time()
 
@@ -308,15 +358,25 @@ class Agent:
         # 2. Hand (fast)
         hand = self.hand_detector.get_hand(screenshot, verbose=False)
 
-        # 3. Tower HP (throttled - OCR is slower)
+        # 3. Tower HP (throttled - YOLOv8 digit detection)
         if current_time - self.last_tower_hp_update > self.TOWER_HP_UPDATE_INTERVAL:
-            self.cached_tower_hp = self.tower_hp_detector.get_tower_hp(screenshot, verbose=False)
-            self.last_tower_hp_update = current_time
+            if self.tower_hp_detector:
+                self.cached_tower_hp = self.tower_hp_detector.detect_tower_hp(screenshot)
+                self.last_tower_hp_update = current_time
 
-        tower_hp = self.cached_tower_hp if self.cached_tower_hp is not None else {
-            'enemy_left_princess': 0, 'enemy_king': 0, 'enemy_right_princess': 0,
-            'ally_left_princess': 0, 'ally_king': 0, 'ally_right_princess': 0,
-        }
+        # Use cached tower HP, or set defaults for princess towers only
+        # King towers should remain None until activated and detected
+        if self.cached_tower_hp is not None:
+            tower_hp = self.cached_tower_hp
+        else:
+            tower_hp = {
+                'enemy_left_princess': 1768,
+                'enemy_king': None,  # Don't assume - detect when activated
+                'enemy_right_princess': 1768,
+                'ally_left_princess': 1768,
+                'ally_king': None,  # Don't assume - detect when activated
+                'ally_right_princess': 1768,
+            }
 
         # 4. Troop detections (if YOLO enabled)
         all_detections = []
@@ -346,8 +406,11 @@ class Agent:
             'battle_result': self.battle_result
         }
 
-        # 6. Calculate reward from previous step
-        if self.prev_state is not None and self.prev_action is not None:
+        # 5. Update tower HP history
+        self._update_tower_hp_history(tower_hp)
+
+        # 6. Calculate reward and train (only in --rl mode, skip in --model inference)
+        if self.use_rl and self.prev_state is not None and self.prev_action is not None:
             reward = self.reward_calculator.calculate_step_reward(
                 prev_state=self.prev_state,
                 curr_state=current_state_dict,
@@ -370,10 +433,11 @@ class Agent:
             # Print stats periodically
             if self.rl_agent.steps % 100 == 0:
                 stats = self.rl_agent.get_stats()
-                print(f"\n[RL STATS] Steps: {stats['steps']}, "
-                      f"Epsilon: {stats['epsilon']:.3f}, "
-                      f"Avg Reward: {stats['avg_reward_100']:.2f}, "
-                      f"Avg Loss: {stats['avg_loss_100']:.4f}")
+                if self.verbose:
+                    print(f"\n[RL STATS] Steps: {stats['steps']}, "
+                          f"Epsilon: {stats['epsilon']:.3f}, "
+                          f"Avg Reward: {stats['avg_reward_100']:.2f}, "
+                          f"Avg Loss: {stats['avg_loss_100']:.4f}")
 
         # 7. Get valid actions
         valid_actions = self._get_valid_actions(hand, elixir)
@@ -392,13 +456,62 @@ class Agent:
         # 9. Decode action to (card_slot, row, col)
         card_slot, row, col = self._decode_action(action)
 
-        # 10. Execute action
+        # 10. Check if action is "do nothing"
+        if card_slot is None:
+            # Do nothing action - just wait and observe
+            # Still store this as prev_state for learning
+            self.prev_state = current_state_dict
+            self.prev_action = action
+            self.prev_state_vector = current_state_vector
+            self.current_hand = hand
+            self.current_elixir = elixir
+            return
+
+        # Get card info and check elixir
         card_info = hand[card_slot] if card_slot < len(hand) else None
         if card_info:
+            from detection.card_info import get_card_elixir
             card_name = card_info.get('card_name', 'unknown')
-            print(f"[RL PLAY] {card_name} at row {row}, col {col} (epsilon: {self.rl_agent.epsilon:.3f})")
+
+            # Don't play "empty" cards
+            if card_name == 'empty':
+                self.prev_state = None
+                self.prev_action = None
+                self.prev_state_vector = None
+                return
+
+            elixir_cost = get_card_elixir(card_name)
+
+            # Check if we have enough elixir
+            if elixir < elixir_cost:
+                print(f"  ⏸️  Not enough elixir for {card_name} (need {elixir_cost}, have {elixir:.0f})")
+                self.prev_state = None
+                self.prev_action = None
+                self.prev_state_vector = None
+                return
+
+        # Check cooldown before playing
+        current_time = time.time()
+        time_since_last_play = current_time - self.last_play_time
+        if time_since_last_play < self.play_cooldown:
+            remaining = self.play_cooldown - time_since_last_play
+            print(f"  ⏸️  Card on cooldown - wait {remaining:.1f}s")
+            # Don't execute action, but keep state for next step
+            self.prev_state = None
+            self.prev_action = None
+            self.prev_state_vector = None
+            return
+
+        # 11. Execute action
+        if card_info:
+            mode = "Inference" if self.use_model else "RL"
+            action_msg = f"{mode} Play {card_name} ({elixir:.0f}/{elixir_cost} elixir) at Grid[{row},{col}] (ε={self.rl_agent.epsilon:.2f})"
+            self._add_action(action_msg)
 
         self.gc.play_card(card_slot, row, col)
+
+        # Update last play time
+        self.last_play_time = current_time
 
         # 11. Save state for next step
         self.prev_state = current_state_dict
@@ -424,6 +537,10 @@ class Agent:
             card_name = card.get('card_name', 'unknown')
             available = card.get('available', True)
 
+            # Skip empty card slots
+            if card_name == 'empty':
+                continue
+
             if not available:
                 continue
 
@@ -444,27 +561,108 @@ class Agent:
         return card_slot * (32 * 18) + row * 18 + col
 
     def _decode_action(self, action):
-        """Decode action index to (card_slot, row, col)"""
+        """
+        Decode action index to (card_slot, row, col)
+
+        Returns:
+            (None, None, None) if action is "do nothing"
+            (card_slot, row, col) otherwise
+        """
+        # Action 2304 = "do nothing"
+        if action == 2304:
+            return None, None, None
+
+        # Actions 0-2303 = play card at position
         card_slot = action // (32 * 18)
         remainder = action % (32 * 18)
         row = remainder // 18
         col = remainder % 18
         return card_slot, row, col
 
+    def _update_tower_hp_history(self, tower_hp: dict):
+        """
+        Update tower HP history for each tower
+
+        Args:
+            tower_hp: Dict of current tower HP values
+        """
+        for tower_name, hp_value in tower_hp.items():
+            if tower_name in self.tower_hp_history:
+                # Add current HP to history
+                self.tower_hp_history[tower_name].append(hp_value)
+
+                # Keep only last N readings
+                if len(self.tower_hp_history[tower_name]) > self.TOWER_HP_HISTORY_LENGTH:
+                    self.tower_hp_history[tower_name].pop(0)
+
+    def _print_game_state(self, enemy_detections, ally_detections):
+        """Print game state information relevant for RL model"""
+        # Clear previous output (move cursor up and clear lines)
+        print("\033[2J\033[H", end="")  # Clear screen and move to top
+
+        # Elixir
+        elixir = self.current_elixir if self.current_elixir is not None else 0
+
+        # Hand cards (names only)
+        hand = [card['card_name'] if card else 'empty' for card in self.current_hand]
+
+        # Enemy troops (specific card name and grid position)
+        enemies = []
+        for d in enemy_detections:
+            card_name = d.get('card_type', 'unknown')  # Get specific card like 'giant', 'wizard'
+            grid = d.get('grid', (0, 0))
+            enemies.append(f"{card_name}@{grid}")
+
+        # Ally troops (specific card name and grid position)
+        allies = []
+        for d in ally_detections:
+            card_name = d.get('card_type', 'unknown')  # Get specific card like 'giant', 'wizard'
+            grid = d.get('grid', (0, 0))
+            allies.append(f"{card_name}@{grid}")
+
+        # Tower HP (if available)
+        tower_hp = None
+        if hasattr(self, 'tower_tracker') and self.tower_tracker:
+            tower_hp = self.tower_tracker.get_tower_hp()
+
+        # Print formatted state
+        print("=" * 80)
+        print("GAME STATE")
+        print("=" * 80)
+        print(f"Elixir: {elixir}")
+        print(f"Hand:   [{', '.join(hand)}]")
+
+        if tower_hp:
+            print(f"Towers: Left={tower_hp['left_tower']}% | King={tower_hp['king_tower']}% | Right={tower_hp['right_tower']}%")
+
+        print(f"\nEnemies ({len(enemies)}):")
+        if enemies:
+            for i, enemy in enumerate(enemies[:5]):  # Show first 5
+                print(f"  {enemy}")
+            if len(enemies) > 5:
+                print(f"  ... and {len(enemies) - 5} more")
+        else:
+            print("  None")
+
+        print(f"\nAllies ({len(allies)}):")
+        if allies:
+            for i, ally in enumerate(allies[:5]):  # Show first 5
+                print(f"  {ally}")
+            if len(allies) > 5:
+                print(f"  ... and {len(allies) - 5} more")
+        else:
+            print("  None")
+
+        print("=" * 80)
+
     def _select_best_card(self, enemy_detections):
         """
-        Select the best card to play based on:
-        1. Elixir availability
-        2. Card availability (not on cooldown)
-        3. Enemy threats (air vs ground, type counters)
+        Select a random playable card
 
         Returns:
             (card_slot, card_info) tuple, or (None, None) if no playable card
         """
-        from detection.card_info import get_card_elixir, can_target_air, CARD_INFO
-
-        # Check if we have any enemies
-        has_air_enemies = any('air' in d.get('class_name', '') for d in enemy_detections)
+        from detection.card_info import CARD_INFO
 
         # Build list of playable cards
         playable_cards = []
@@ -488,274 +686,86 @@ class Agent:
             if self.current_elixir is not None and self.current_elixir < elixir_cost:
                 continue
 
-            # Add elixir cost and stats to card info
+            # Add elixir cost to card info
             card_with_stats = card.copy()
             card_with_stats['elixir_cost'] = elixir_cost
-            card_with_stats['can_target_air'] = can_target_air(card_name)
-            card_with_stats['targets'] = card_stats.get('targets', [])
 
-            # Calculate priority score
-            priority = 0
-
-            # Prioritize air-targeting cards if there are air enemies
-            if has_air_enemies and card_with_stats['can_target_air']:
-                priority += 10
-
-            # Prioritize cheaper cards (elixir efficiency)
-            priority += (10 - elixir_cost) * 0.5
-
-            # Prioritize by card type for defense
-            card_type = card.get('card_type', 'unknown')
-            if card_type == 'building':
-                priority += 5  # Buildings are good defensive structures
-            elif card_type == 'ranged':
-                priority += 3  # Ranged units are versatile
-            elif card_type == 'tank':
-                priority += 2  # Tanks are strong but slow
-
-            playable_cards.append((slot_idx, card_with_stats, priority))
+            playable_cards.append((slot_idx, card_with_stats))
 
         if not playable_cards:
             return None, None
 
-        # Sort by priority (highest first) and pick best card
-        playable_cards.sort(key=lambda x: x[2], reverse=True)
-        best_slot, best_card, _ = playable_cards[0]
+        # Pick a random playable card
+        selected_slot, selected_card = random.choice(playable_cards)
 
-        return best_slot, best_card
+        print(f"  ✅ Randomly selected: Slot {selected_slot} ({selected_card['card_name']}, {selected_card['elixir_cost']} elixir)")
+
+        return selected_slot, selected_card
 
     def _get_smart_placement(self, card_info, enemy_detections):
         """
-        Determine smart placement based on card type and enemy positions
-
-        Buildings: Place in front of towers (defensive position)
-        Air-counters: Place near air enemies
-        Other cards: Use weighted threat placement
+        Random placement in our territory for all cards
 
         Returns:
-            (row, col) tuple, or (None, None) if no valid placement
+            (row, col) tuple
         """
-        card_type = card_info.get('card_type', 'unknown')
-        card_name = card_info.get('card_name', 'unknown')
-
-        print(f"[DEBUG] Card: {card_name}, Type: {card_type}")
-
-        # Buildings always go in defensive positions (front of towers)
-        if card_type == 'building':
-            # Place in our territory, centered
-            row = random.randint(22, 28)  # Closer to our towers
-            col = random.randint(6, 11)   # Center column
-            print(f"[PLACEMENT] Building placement (defensive)")
-            return row, col
-
-        # Check if there are air enemies and we can target air
-        has_air_enemies = any('air' in d.get('class_name', '') for d in enemy_detections)
-        can_hit_air = card_info.get('can_target_air', False)
-
-        if has_air_enemies and can_hit_air:
-            # Place near air enemies
-            air_enemies = [d for d in enemy_detections if 'air' in d.get('class_name', '')]
-            if air_enemies:
-                # Get average position of air enemies
-                avg_col = sum(d.get('grid', (0, 9))[1] for d in air_enemies) / len(air_enemies)
-
-                # Place on same side as air enemies (avoid center columns)
-                if avg_col < 9:
-                    col = random.randint(0, 7)  # Left side, avoid column 8
-                else:
-                    col = random.randint(10, 17)  # Right side, avoid column 9
-
-                row = random.randint(20, 28)  # Defensive position
-                print(f"[PLACEMENT] Anti-air placement (targeting air enemies)")
-                return row, col
-
-        # Use weighted threat placement for everything else
-        return self._get_weighted_placement(enemy_detections)
-
-    def _get_weighted_placement(self, enemy_detections):
-        """
-        Determine where to place card based on enemy positions minus ally presence.
-
-        Threat = Raw Enemy Threat - (Ally Threat / 2)
-
-        For example:
-        - 3 enemy melee = 3 threat
-        - 4 ally melee on same side = 4/2 = 2 defense
-        - Net threat = 3 - 2 = 1
-
-        Places on the side with higher net threat.
-        """
-        # If model is not enabled, just place randomly
-        if not self.use_model or not self.card_detector:
-            row = random.randint(16, 31)
-            col = random.randint(0, 17)
-            return row, col
-
-        # Threat values based on actual troop strength
-        THREAT_VALUES = {
-            # Troops - Low threat
-            'skeletons': 1,
-            'spear_goblins': 2,
-            'goblins': 3,
-            'fire_spirit': 3,
-            'electro_spirit': 2,
-            'bomber': 4,
-            # Troops - Medium threat
-            'archers': 4,
-            'minions': 5,
-            'furnace': 5,  # Reworked - now a troop
-            # Troops - Medium-high threat
-            'barbarians': 6,
-            'skeleton_dragons': 7,
-            # Troops - High threat
-            'knight': 9,
-            'mega_minion': 9,
-            # Troops - Very high threat
-            'musketeer': 10,
-            'valkyrie': 11,
-            'wizard': 12,
-            'mini_pekka': 14,
-            # Troops - Extreme threat
-            'battle_ram': 16,
-            'giant': 18,
-            # Spells
-            'arrows': 5,
-            'fireball': 8,
-            # Buildings
-            'cannon': 0,
-            'bomb_tower': 0,
-            'inferno_tower': 0,
-            'tombstone': 0,
-            'goblin_hut': 4,
-            'goblin_cage': 0,
-        }
-
-        def get_threat_value(card_name, card_type_fallback):
-            """Get threat value with fallback to category-based estimate"""
-            # Try exact match first
-            if card_name in THREAT_VALUES:
-                return THREAT_VALUES[card_name]
-            # Category-based fallback
-            category_defaults = {
-                'melee': 5,
-                'ranged': 4,
-                'tank': 10,
-                'air': 5,
-                'building': 0
-            }
-            return category_defaults.get(card_type_fallback, 5)
-
-        # Get all detections (both ally and enemy)
-        all_detections = []
-        if self.card_detector:
-            all_detections = self.card_detector.detect(self.gc.take_screenshot(), verbose=False)
-
-        # Separate ally and enemy detections
-        ally_detections = [d for d in all_detections if d['class_name'].startswith('ally')]
-
-        # Calculate raw enemy threat for left (col 0-8) and right (col 9-17)
-        left_enemy_threat = 0
-        right_enemy_threat = 0
-
-        left_ally_defense = 0
-        right_ally_defense = 0
-
-        # Calculate enemy threats
-        for detection in enemy_detections:
-            class_name = detection.get('class_name', 'enemy')
-
-            # Extract card name and type
-            # Format can be: "enemy", "enemy_tank", or potentially "enemy_wizard"
-            if '_' in class_name:
-                parts = class_name.split('_', 1)
-                card_identifier = parts[1]  # Remove 'enemy_' prefix
-            else:
-                card_identifier = 'melee'  # Default
-
-            # Try to get specific threat value
-            threat = get_threat_value(card_identifier, card_identifier)
-
-            # Get column position from grid coordinates
-            grid = detection.get('grid')
-            if grid:
-                grid_row, grid_col = grid
-                col = grid_col
-            else:
-                col = 9  # Default to middle if no grid data
-
-            if col < 9:
-                left_enemy_threat += threat
-            else:
-                right_enemy_threat += threat
-
-        # Calculate ally defense
-        for detection in ally_detections:
-            class_name = detection.get('class_name', 'ally')
-
-            # Extract card name and type
-            if '_' in class_name:
-                parts = class_name.split('_', 1)
-                card_identifier = parts[1]  # Remove 'ally_' prefix
-            else:
-                card_identifier = 'melee'  # Default
-
-            # Try to get specific threat value
-            threat = get_threat_value(card_identifier, card_identifier)
-
-            # Get column position from grid coordinates
-            grid = detection.get('grid')
-            if grid:
-                grid_row, grid_col = grid
-                col = grid_col
-            else:
-                col = 9  # Default to middle if no grid data
-
-            if col < 9:
-                left_ally_defense += threat
-            else:
-                right_ally_defense += threat
-
-        # Calculate net threat: Raw Enemy Threat - (Ally Defense / 2)
-        left_net_threat = left_enemy_threat - (left_ally_defense / 2.0)
-        right_net_threat = right_enemy_threat - (right_ally_defense / 2.0)
-
-        # Debug output
-        print(f"Left: Enemy={left_enemy_threat}, Ally={left_ally_defense}, Net Threat={left_net_threat:.1f}")
-        print(f"Right: Enemy={right_enemy_threat}, Ally={right_ally_defense}, Net Threat={right_net_threat:.1f}")
-
-        # Decide which side to play on (place where net threat is higher)
-        # NOTE: Grid coordinates are inverted - swap left/right
-
-        # If no net threat on either side, don't place
-        if left_net_threat <= 0 and right_net_threat <= 0:
-            print(f"No net threat - not placing")
-            return None, None
-
-        # If equal net threat (both > 0), place randomly (but avoid center)
-        if left_net_threat == right_net_threat and left_net_threat > 0:
-            if random.random() < 0.5:
-                col = random.randint(0, 7)  # Left side
-            else:
-                col = random.randint(10, 17)  # Right side
-            print(f"Placing RANDOM (equal net threat)")
-        # More net threat on left, play on RIGHT side (inverted) - avoid center
-        elif left_net_threat > right_net_threat:
-            col = random.randint(0, 7)  # Left side, avoid columns 8-9
-            print(f"Placing LEFT (higher threat on left)")
-        # More net threat on right, play on LEFT side (inverted) - avoid center
-        else:
-            col = random.randint(10, 17)  # Right side, avoid columns 8-9
-            print(f"Placing RIGHT (higher threat on right)")
-
-        # Always play in our territory (rows 16-31)
-        row = random.randint(16, 31)
-
+        # Random placement in our territory
+        row = random.randint(16, 31)  # Our territory (bottom half)
+        col = random.randint(0, 17)   # Any column
         return row, col
 
     def handle_battle_end(self):
-        # Log battle result if detected
+        # Check for battle result if not already detected
+        if self.battle_result is None:
+            screenshot = self.gc.adb.screenshot()
+            if screenshot is not None:
+                result = self.result_detector.detect_result(screenshot, threshold=0.92, verbose=self.verbose)
+                if result is not None:
+                    self.battle_result = result
+                    self.display.log_battle_result(result)
+
+        # Log battle result
         if self.battle_result is not None:
-            print(f"[BATTLE RESULT] {self.battle_result.upper()}")
+            self._add_action(f"Battle result: {self.battle_result.upper()}")
+
+            # RL: Apply final reward for battle outcome
+            if self.use_rl and self.rl_agent is not None:
+                # Calculate outcome reward
+                if self.battle_result == 'victory':
+                    outcome_reward = 200.0
+                    print(f"\n[BATTLE END] 🏆 VICTORY detected! Final reward: +{outcome_reward:.2f}")
+                elif self.battle_result == 'defeat':
+                    outcome_reward = -200.0
+                    print(f"\n[BATTLE END] ☠️  DEFEAT detected! Final penalty: {outcome_reward:.2f}")
+                elif self.battle_result == 'draw':
+                    outcome_reward = 0.0
+                    print(f"\n[BATTLE END] 🤝 DRAW detected! Final reward: {outcome_reward:.2f}")
+                else:
+                    outcome_reward = 0.0
+
+                # Store final transition with outcome reward (if we have previous state)
+                if outcome_reward != 0 and self.prev_state is not None:
+                    # Create final state (battle ended)
+                    final_state_vector = self.state_encoder.encode_state(
+                        elixir=self.current_elixir if self.current_elixir else 0,
+                        hand=self.current_hand if self.current_hand else [None, None, None, None],
+                        enemy_detections=[],
+                        ally_detections=[],
+                        tower_hp=self.cached_tower_hp if self.cached_tower_hp else {}
+                    )
+
+                    self.rl_agent.store_transition(
+                        state=self.prev_state_vector,
+                        action=self.prev_action,
+                        reward=outcome_reward,
+                        next_state=final_state_vector,
+                        done=True
+                    )
+                    print(f"[DEBUG] Victory/defeat reward stored in replay buffer (+{outcome_reward:.2f} to total_reward)")
+                elif outcome_reward != 0:
+                    # No previous state - just add to total reward directly
+                    print(f"[DEBUG] No prev_state, adding outcome reward directly to total_reward")
+                    self.rl_agent.total_reward += outcome_reward
 
         # RL: End episode and save checkpoint
         if self.use_rl and self.rl_agent is not None:
@@ -763,7 +773,7 @@ class Agent:
             self.rl_agent.end_episode()
 
             # Save checkpoint every 5 games
-            if self.games_played % 5 == 0:
+            if self.games_played % 1 == 0:
                 checkpoint_path = f"checkpoints/checkpoint_game_{self.games_played}.pt"
                 self.rl_agent.save_checkpoint(checkpoint_path)
 
@@ -772,11 +782,14 @@ class Agent:
 
             # Print episode stats
             stats = self.rl_agent.get_stats()
-            print(f"\n[RL EPISODE END]")
-            print(f"  Episodes: {stats['episodes']}")
-            print(f"  Avg Reward (100): {stats['avg_reward_100']:.2f}")
-            print(f"  Epsilon: {stats['epsilon']:.3f}")
-            print(f"  Buffer: {stats['buffer_size']}/{10000}")
+            print(f"\n{'='*70}")
+            print(f"RL EPISODE {stats['episodes']} END")
+            print(f"{'='*70}")
+            print(f"  This Game Reward:  {stats['last_episode_reward']:+.2f}")
+            print(f"  Avg Reward (last 100 games): {stats['avg_reward_100']:+.2f}")
+            print(f"  Epsilon: {stats['epsilon']:.3f} ({'exploring' if stats['epsilon'] > 0.5 else 'exploiting'})")
+            print(f"  Buffer: {stats['buffer_size']}/{10000} ({stats['buffer_size']/100:.0f}%)")
+            print(f"{'='*70}\n")
 
             # Reset state for next episode
             self.prev_state = None
@@ -784,7 +797,33 @@ class Agent:
             self.prev_state_vector = None
             self.cached_tower_hp = None
 
-        print("finishing game ok button")
+            # Reset tower HP detector for next battle
+            if self.tower_hp_detector:
+                self.tower_hp_detector.reset_tracking()
+
+            # Reset tower HP history for next battle
+            for tower_name in self.tower_hp_history:
+                self.tower_hp_history[tower_name] = []
+
+        # Reset state for --model mode (inference only, no training)
+        if self.use_model and not self.use_rl:
+            self.prev_state = None
+            self.prev_action = None
+            self.prev_state_vector = None
+            self.cached_tower_hp = None
+
+            # Reset tower HP detector for next battle
+            if self.tower_hp_detector:
+                self.tower_hp_detector.reset_tracking()
+
+            # Reset tower HP history for next battle
+            for tower_name in self.tower_hp_history:
+                self.tower_hp_history[tower_name] = []
+
+        # Reset decision tracking for next battle (--model mode)
+        self.last_decision_elixir = None
+
+        self._add_action("Clicking OK button to finish game")
         self.gc.click_ok_button()
         self.games_played += 1
 
@@ -797,9 +836,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Clash Royale RL Agent")
     parser.add_argument("--instance", type=int, default=0, help="Bluestacks Instance ID")
     parser.add_argument("--games", type=int, default=1, help="Number of games to play")
-    parser.add_argument("--screenshots", action="store_true", help="Save screenshots every 3 seconds for training")
+    parser.add_argument("--screenshots", action="store_true", help="Save screenshots every 5 seconds for training")
     parser.add_argument("--model", action="store_true", help="Use YOLO model to detect troops and print detections")
     parser.add_argument("--rl", action="store_true", help="Enable RL training mode with DQN agent")
+    parser.add_argument("--checkpoint", type=str, default=None, help="Load training from checkpoint file (e.g., checkpoints/latest.pt)")
+    parser.add_argument("--verbose", action="store_true", help="Show all debug output (default: clean dashboard)")
 
     args = parser.parse_args()
 
@@ -807,6 +848,15 @@ if __name__ == "__main__":
         instance_id=args.instance,
         save_screenshots=args.screenshots,
         use_model=args.model or args.rl,  # RL requires model for troop detection
-        use_rl=args.rl
+        use_rl=args.rl,
+        verbose=args.verbose
     )
+
+    # Load checkpoint if specified
+    if args.checkpoint and args.rl:
+        if agent.rl_agent:
+            agent.rl_agent.load_checkpoint(args.checkpoint)
+        else:
+            print(f"⚠️  Warning: --checkpoint specified but RL mode not enabled")
+
     agent.play_games(num_games=args.games)

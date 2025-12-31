@@ -41,21 +41,22 @@ class StateDetector:
                 print("[STATE] Detected: IN_BATTLE (elixir bar visible)")
             return GameState.IN_BATTLE
 
-        # 2. Check for main menu (bottom navigation bar - always visible regardless of page)
-        main_menu_result = self._check_main_menu(screenshot, verbose=verbose)
-        if main_menu_result:
-            if verbose:
-                print("[STATE] Detected: MAIN_MENU")
-            return GameState.MAIN_MENU
-
-        # 3. Check for battle end (OK button) - BEFORE queueing check
-        # Battle end screen also has dark background, so check OK button first
+        # 2. Check for battle end (OK button) - BEFORE main menu check
+        # Battle end screen can have bright elements that look like main menu
+        # Check for OK button first to avoid false main menu detection
         ok_button = self.image_matcher.find_template(screenshot, 'ok_button', threshold=0.85)
         if ok_button:
             if verbose:
                 x, y, conf = ok_button
                 print(f"[STATE] Detected: BATTLE_END (OK button at {x},{y} conf={conf:.2f})")
             return GameState.BATTLE_END
+
+        # 3. Check for main menu (bottom navigation bar - always visible regardless of page)
+        main_menu_result = self._check_main_menu(screenshot, verbose=verbose)
+        if main_menu_result:
+            if verbose:
+                print("[STATE] Detected: MAIN_MENU")
+            return GameState.MAIN_MENU
 
         # 4. Check for queueing/loading state (after OK button to avoid false positives)
         if self._check_queueing_state(screenshot):

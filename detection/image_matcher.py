@@ -112,26 +112,42 @@ class ImageMatcher:
     
     def _get_template_variants(self, template_name: str) -> List[str]:
         """
-        Get all variants of a template (e.g., button_1.png, button_2.png)
-        
+        Get all variants of a template
+
+        Supports two formats:
+        1. Numbered files: battle_button_1.png, battle_button_2.png, ...
+        2. Folder-based: battle_button/variant1.png, battle_button/variant2.png, ...
+
         Args:
             template_name: Base template name (e.g., 'battle_button.png' or 'battle_button')
-            
+
         Returns:
-            List of template filenames found
+            List of template filenames/paths found
         """
         # Remove extension if present
         base_name = template_name.replace('.png', '').replace('.jpg', '')
-        
-        # Find all files matching pattern: base_name_*.png
+
         variants = []
+
+        # Check for folder-based variants first
+        folder_path = self.template_dir / base_name
+        if folder_path.exists() and folder_path.is_dir():
+            # Load all images from the folder
+            for file in os.listdir(folder_path):
+                if file.endswith('.png') or file.endswith('.jpg'):
+                    # Store as relative path: "battle_button/variant1.png"
+                    variants.append(f"{base_name}/{file}")
+
+        # Also check for numbered file variants (backward compatibility)
         for file in os.listdir(self.template_dir):
             if file.startswith(base_name) and (file.endswith('.png') or file.endswith('.jpg')):
-                variants.append(file)
-        
-        # Sort to ensure consistent order (1, 2, 3, etc.)
+                # Avoid duplicates if folder-based variants exist
+                if file not in variants:
+                    variants.append(file)
+
+        # Sort to ensure consistent order
         variants.sort()
-        
+
         return variants
     
     def find_all_templates(

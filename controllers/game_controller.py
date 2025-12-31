@@ -46,15 +46,15 @@ class GameController:
         
         screen_width = self.arena_config.screen_width
         screen_height = self.arena_config.screen_height
-        
-        card_y = int(screen_height * 0.92)
-        
-        margin = int(screen_width * 0.15)
-        card_width = (screen_width - 2 * margin) / 4
-        
+
+        # Card positions must match CardHandDetector.CARD_SLOTS
+        # CARD_SLOTS = [(156, 1040, 292, 1225), (292, 1040, 427, 1225), (427, 1040, 562, 1225), (562, 1040, 698, 1225)]
+        # Use center of each slot for swipe starting position
         self.card_positions = [
-            (int(margin + card_width * 0.5 + i * card_width), card_y)
-            for i in range(4)
+            (224, 1132),  # Slot 0: center of (156, 1040, 292, 1225)
+            (359, 1132),  # Slot 1: center of (292, 1040, 427, 1225)
+            (494, 1132),  # Slot 2: center of (427, 1040, 562, 1225)
+            (630, 1132),  # Slot 3: center of (562, 1040, 698, 1225)
         ]
         
         print(f"GameController initialized for instance {instance_id}")
@@ -78,22 +78,19 @@ class GameController:
             return False
         
         start_x, start_y = self.card_positions[card_slot]
-        
+
         target_x, target_y = self.grid.grid_to_pixel(row, col)
-        
+
         target_x += random.randint(-3, 3)
         target_y += random.randint(-3, 3)
-        
-        print(f"Playing card {card_slot}: ({start_x},{start_y}) → ({target_x},{target_y}) [Grid: {row},{col}]")
-        
+
         success = self.adb.swipe(start_x, start_y, target_x, target_y, duration=200)
-        
+
         if not success:
-            print(f"❌ Swipe failed")
             return False
-        
+
         time.sleep(random.uniform(0.15, 0.35))
-        
+
         return True
     
     def test_connection(self) -> bool:
@@ -234,11 +231,11 @@ class GameController:
     def click_battle_button(self) -> bool:
         """
         Find and click the battle button (to start a match)
-        
+
         Returns:
             True if clicked successfully, False otherwise
         """
-        return self.click_button('battle_button.png', threshold=0.6)
+        return self.click_button('battle_button.png', threshold=0.45)
     
     def click_ok_button(self) -> bool:
         """

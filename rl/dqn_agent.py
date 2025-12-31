@@ -232,9 +232,6 @@ class DQNAgent:
         if self.steps % self.target_update_freq == 0:
             self.target_network.load_state_dict(self.q_network.state_dict())
 
-        # Decay epsilon
-        self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
-
         loss_value = loss.item()
         self.losses.append(loss_value)
 
@@ -250,6 +247,9 @@ class DQNAgent:
             self.episode_rewards.append(self.total_reward)
 
         self.total_reward = 0
+
+        # Decay epsilon once per episode (not per training step)
+        self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
 
     def save_checkpoint(self, filepath: str):
         """Save model checkpoint"""
@@ -302,6 +302,7 @@ class DQNAgent:
             'episodes': self.episodes,
             'steps': self.steps,
             'epsilon': self.epsilon,
+            'last_episode_reward': self.episode_rewards[-1] if len(self.episode_rewards) > 0 else 0,
             'avg_reward_100': np.mean(recent_rewards),
             'avg_loss_100': np.mean(recent_losses),
             'buffer_size': len(self.replay_buffer),

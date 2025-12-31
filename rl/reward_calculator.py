@@ -16,11 +16,11 @@ class RewardCalculator:
     def __init__(
         self,
         tower_damage_reward: float = 0.01,
-        tower_destroy_bonus: float = 10.0,
+        tower_destroy_bonus: float = 50.0,
         elixir_advantage_reward: float = 0.1,
         troop_presence_reward: float = 0.05,
-        win_reward: float = 100.0,
-        loss_penalty: float = -100.0,
+        win_reward: float = 200.0,
+        loss_penalty: float = -200.0,
         draw_reward: float = 0.0
     ):
         """
@@ -69,20 +69,37 @@ class RewardCalculator:
             Total reward
         """
         reward = 0.0
+        reward_breakdown = []
 
         # 1. Tower HP rewards (most important!)
-        reward += self._calculate_tower_hp_reward(prev_tower_hp, curr_tower_hp)
+        tower_reward = self._calculate_tower_hp_reward(prev_tower_hp, curr_tower_hp)
+        if tower_reward != 0:
+            reward += tower_reward
+            reward_breakdown.append(f"Tower: {tower_reward:+.2f}")
 
-        # 2. Elixir advantage (small bonus for elixir management)
-        if prev_elixir is not None and curr_elixir is not None:
-            reward += self._calculate_elixir_reward(prev_elixir, curr_elixir)
+        # 2. Elixir advantage - DISABLED (removed per user request)
+        # if prev_elixir is not None and curr_elixir is not None:
+        #     elixir_reward = self._calculate_elixir_reward(prev_elixir, curr_elixir)
+        #     if elixir_reward != 0:
+        #         reward += elixir_reward
+        #         reward_breakdown.append(f"Elixir: {elixir_reward:+.2f}")
 
-        # 3. Troop presence (encourage having units on field)
-        reward += self._calculate_troop_presence_reward(ally_troop_count, enemy_troop_count)
+        # 3. Troop presence - DISABLED (removed per user request)
+        # troop_reward = self._calculate_troop_presence_reward(ally_troop_count, enemy_troop_count)
+        # if troop_reward != 0:
+        #     reward += troop_reward
+        #     reward_breakdown.append(f"Troops: {troop_reward:+.2f}")
 
         # 4. Battle result (huge reward/penalty)
         if battle_result is not None:
-            reward += self._calculate_battle_result_reward(battle_result)
+            result_reward = self._calculate_battle_result_reward(battle_result)
+            if result_reward != 0:
+                reward += result_reward
+                reward_breakdown.append(f"{battle_result.upper()}: {result_reward:+.2f}")
+
+        # Print reward breakdown if anything changed
+        if reward_breakdown:
+            print(f"[REWARD] {' | '.join(reward_breakdown)} | Total: {reward:+.2f}")
 
         return reward
 
@@ -107,10 +124,14 @@ class RewardCalculator:
         # Enemy tower damage = positive reward
         enemy_towers = ['enemy_left_princess', 'enemy_king', 'enemy_right_princess']
         for tower in enemy_towers:
-            prev_hp = prev_tower_hp.get(tower, 0)
-            curr_hp = curr_tower_hp.get(tower, 0)
+            prev_hp = prev_tower_hp.get(tower, None)
+            curr_hp = curr_tower_hp.get(tower, None)
 
-            # Handle None values (OCR failed)
+            # Skip if both are None (king tower not activated yet)
+            if prev_hp is None and curr_hp is None:
+                continue
+
+            # Handle None values (detection failed or tower not activated)
             if prev_hp is None:
                 prev_hp = 0
             if curr_hp is None:
@@ -124,16 +145,21 @@ class RewardCalculator:
 
                 # Bonus for destroying tower
                 if prev_hp > 0 and curr_hp == 0:
-                    reward += self.tower_destroy_bonus
-                    print(f"[REWARD] Destroyed {tower}! Bonus: +{self.tower_destroy_bonus}")
+                    tower_reward = self.tower_destroy_bonus
+                    reward += tower_reward
+                    print(f"[REWARD] Destroyed {tower}! Bonus: +{tower_reward}")
 
         # Ally tower damage = negative reward
         ally_towers = ['ally_left_princess', 'ally_king', 'ally_right_princess']
         for tower in ally_towers:
-            prev_hp = prev_tower_hp.get(tower, 0)
-            curr_hp = curr_tower_hp.get(tower, 0)
+            prev_hp = prev_tower_hp.get(tower, None)
+            curr_hp = curr_tower_hp.get(tower, None)
 
-            # Handle None values
+            # Skip if both are None (king tower not activated yet)
+            if prev_hp is None and curr_hp is None:
+                continue
+
+            # Handle None values (detection failed or tower not activated)
             if prev_hp is None:
                 prev_hp = 0
             if curr_hp is None:
@@ -147,8 +173,9 @@ class RewardCalculator:
 
                 # Penalty for losing tower
                 if prev_hp > 0 and curr_hp == 0:
-                    reward -= self.tower_destroy_bonus
-                    print(f"[REWARD] Lost {tower}! Penalty: -{self.tower_destroy_bonus}")
+                    tower_penalty = self.tower_destroy_bonus
+                    reward -= tower_penalty
+                    print(f"[REWARD] Lost {tower}! Penalty: -{tower_penalty}")
 
         return reward
 

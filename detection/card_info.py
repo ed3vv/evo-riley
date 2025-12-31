@@ -13,7 +13,15 @@ Targets can be a list: ['ground'] or ['ground', 'air']
 """
 
 
-CARD_INFO = {    'archers': {
+CARD_INFO = {
+    'empty': {
+        'category': 'empty',
+        'elixir_cost': 0,
+        'targets': [],
+        'range': None,
+        'speed': None,
+    },
+    'archers': {
         'category': 'ranged',
         'elixir_cost': 3,
         'targets': ['ground', 'air'],
@@ -63,9 +71,9 @@ CARD_INFO = {    'archers': {
         'speed': 'medium',
     },
     'giant': {
-        'category': 'tank',
+        'category': 'win_condition',
         'elixir_cost': 5,
-        'targets': ['ground'],  # Only targets buildings
+        'targets': ['buildings'],  # Only targets buildings
         'range': 'melee',
         'speed': 'slow',
     },
@@ -245,9 +253,9 @@ CARD_INFO = {    'archers': {
         'speed': None,
     },    
     'battle_ram': {
-        'category': 'tank',
+        'category': 'win_condition',
         'elixir_cost': 4,
-        'targets': ['ground'],  # Only targets buildings
+        'targets': ['buildings'],  # Only targets buildings
         'range': 'melee',
         'speed': 'fast',
     },

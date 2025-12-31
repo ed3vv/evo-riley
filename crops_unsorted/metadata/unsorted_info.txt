@@ -1,0 +1,3303 @@
+Unsorted Cards Metadata
+================================================================================
+
+crop_00000.png:
+  Source: screenshot_0108_IN_BATTLE_png.rf.895614e52fa9c1567d7ba9ad97442f25.jpg
+  Predicted: spear_goblins (confidence: 0.945)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. spear_goblins: 0.945
+    2. goblins: 0.037
+    3. archers: 0.013
+    4. musketeer: 0.003
+    5. barbarians: 0.001
+
+crop_00001.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.d019c787db263b9bc8cf89330f8f7162.jpg
+  Predicted: minions (confidence: 0.949)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. minions: 0.949
+    2. mini_pekka: 0.046
+    3. spear_goblins: 0.002
+    4. archers: 0.001
+    5. goblins: 0.001
+
+crop_00002.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.d019c787db263b9bc8cf89330f8f7162.jpg
+  Predicted: mini_pekka (confidence: 0.935)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. mini_pekka: 0.935
+    2. minions: 0.059
+    3. barbarians: 0.003
+    4. furnace: 0.001
+    5. goblins: 0.001
+
+crop_00003.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.d019c787db263b9bc8cf89330f8f7162.jpg
+  Predicted: minions (confidence: 0.948)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. minions: 0.948
+    2. mini_pekka: 0.024
+    3. mega_minion: 0.017
+    4. musketeer: 0.003
+    5. knight: 0.003
+
+crop_00004.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.d019c787db263b9bc8cf89330f8f7162.jpg
+  Predicted: minions (confidence: 0.936)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. minions: 0.936
+    2. knight: 0.025
+    3. mini_pekka: 0.018
+    4. mega_minion: 0.018
+    5. spear_goblins: 0.001
+
+crop_00005.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.5c112d25cd645383939da1151e285658.jpg
+  Predicted: barbarians (confidence: 0.709)
+  Reason: low_confidence_0.71
+  Top-5:
+    1. barbarians: 0.709
+    2. giant: 0.115
+    3. goblin_brawler: 0.111
+    4. mini_pekka: 0.039
+    5. furnace: 0.010
+
+crop_00006.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.5c112d25cd645383939da1151e285658.jpg
+  Predicted: goblin_cage (confidence: 0.491)
+  Reason: low_confidence_0.49
+  Top-5:
+    1. goblin_cage: 0.491
+    2. furnace: 0.321
+    3. knight: 0.040
+    4. tombstone: 0.037
+    5. minions: 0.036
+
+crop_00007.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.87be6a7510f1d743f8db548901ca0c5b.jpg
+  Predicted: bomber (confidence: 0.812)
+  Reason: low_confidence_0.81
+  Top-5:
+    1. bomber: 0.812
+    2. musketeer: 0.058
+    3. skeletons: 0.034
+    4. barbarians: 0.028
+    5. mini_pekka: 0.023
+
+crop_00008.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.87be6a7510f1d743f8db548901ca0c5b.jpg
+  Predicted: giant (confidence: 0.318)
+  Reason: low_confidence_0.32
+  Top-5:
+    1. giant: 0.318
+    2. skeletons: 0.233
+    3. fire_spirit: 0.132
+    4. mini_pekka: 0.079
+    5. barbarians: 0.065
+
+crop_00009.png:
+  Source: screenshot_0079_IN_BATTLE_png.rf.90ca6cb23667728ba046bedb0b2f19e3.jpg
+  Predicted: bomber (confidence: 0.687)
+  Reason: low_confidence_0.69
+  Top-5:
+    1. bomber: 0.687
+    2. minions: 0.229
+    3. mini_pekka: 0.082
+    4. archers: 0.001
+    5. musketeer: 0.000
+
+crop_00010.png:
+  Source: screenshot_0005_IN_BATTLE_png.rf.02745f4902ab2c140144874f18e5161b.jpg
+  Predicted: archers (confidence: 0.497)
+  Reason: low_confidence_0.50
+  Top-5:
+    1. archers: 0.497
+    2. spear_goblins: 0.368
+    3. mini_pekka: 0.037
+    4. musketeer: 0.023
+    5. minions: 0.016
+
+crop_00011.png:
+  Source: screenshot_0005_IN_BATTLE_png.rf.02745f4902ab2c140144874f18e5161b.jpg
+  Predicted: archers (confidence: 0.545)
+  Reason: low_confidence_0.55
+  Top-5:
+    1. archers: 0.545
+    2. minions: 0.272
+    3. goblins: 0.053
+    4. musketeer: 0.036
+    5. spear_goblins: 0.028
+
+crop_00012.png:
+  Source: screenshot_0005_IN_BATTLE_png.rf.02745f4902ab2c140144874f18e5161b.jpg
+  Predicted: goblins (confidence: 0.734)
+  Reason: low_confidence_0.73
+  Top-5:
+    1. goblins: 0.734
+    2. barbarians: 0.144
+    3. mini_pekka: 0.036
+    4. spear_goblins: 0.032
+    5. musketeer: 0.015
+
+crop_00013.png:
+  Source: screenshot_0044_IN_BATTLE_png.rf.0742b068d3594cf8f0630ede423fbe3b.jpg
+  Predicted: spear_goblins (confidence: 0.796)
+  Reason: low_confidence_0.80
+  Top-5:
+    1. spear_goblins: 0.796
+    2. goblins: 0.100
+    3. barbarians: 0.044
+    4. goblin_brawler: 0.024
+    5. mini_pekka: 0.012
+
+crop_00014.png:
+  Source: screenshot_0044_IN_BATTLE_png.rf.0742b068d3594cf8f0630ede423fbe3b.jpg
+  Predicted: spear_goblins (confidence: 0.422)
+  Reason: low_confidence_0.42
+  Top-5:
+    1. spear_goblins: 0.422
+    2. musketeer: 0.229
+    3. bomber: 0.119
+    4. goblin_brawler: 0.089
+    5. mini_pekka: 0.067
+
+crop_00015.png:
+  Source: screenshot_0044_IN_BATTLE_png.rf.0742b068d3594cf8f0630ede423fbe3b.jpg
+  Predicted: mini_pekka (confidence: 0.610)
+  Reason: low_confidence_0.61
+  Top-5:
+    1. mini_pekka: 0.610
+    2. giant: 0.321
+    3. barbarians: 0.054
+    4. goblin_brawler: 0.005
+    5. furnace: 0.003
+
+crop_00016.png:
+  Source: screenshot_0060_IN_BATTLE_png.rf.cbb287f415222a244f18328fa434f72f.jpg
+  Predicted: musketeer (confidence: 0.819)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. musketeer: 0.819
+    2. archers: 0.114
+    3. skeletons: 0.024
+    4. minions: 0.017
+    5. mini_pekka: 0.015
+
+crop_00017.png:
+  Source: screenshot_0060_IN_BATTLE_png.rf.cbb287f415222a244f18328fa434f72f.jpg
+  Predicted: skeletons (confidence: 0.834)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. skeletons: 0.834
+    2. spear_goblins: 0.075
+    3. fire_spirit: 0.045
+    4. musketeer: 0.020
+    5. barbarians: 0.004
+
+crop_00018.png:
+  Source: screenshot_0060_IN_BATTLE_png.rf.cbb287f415222a244f18328fa434f72f.jpg
+  Predicted: skeletons (confidence: 0.739)
+  Reason: low_confidence_0.74
+  Top-5:
+    1. skeletons: 0.739
+    2. spear_goblins: 0.113
+    3. musketeer: 0.075
+    4. mini_pekka: 0.016
+    5. fire_spirit: 0.012
+
+crop_00019.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f1e09a9a2b9b13bd31467a9b558d145f.jpg
+  Predicted: spear_goblins (confidence: 0.394)
+  Reason: low_confidence_0.39
+  Top-5:
+    1. spear_goblins: 0.394
+    2. goblins: 0.259
+    3. goblin_brawler: 0.179
+    4. goblin_hut: 0.042
+    5. mini_pekka: 0.040
+
+crop_00020.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f1e09a9a2b9b13bd31467a9b558d145f.jpg
+  Predicted: goblins (confidence: 0.936)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. goblins: 0.936
+    2. spear_goblins: 0.059
+    3. minions: 0.002
+    4. archers: 0.001
+    5. musketeer: 0.000
+
+crop_00021.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f1e09a9a2b9b13bd31467a9b558d145f.jpg
+  Predicted: spear_goblins (confidence: 0.531)
+  Reason: low_confidence_0.53
+  Top-5:
+    1. spear_goblins: 0.531
+    2. goblin_brawler: 0.335
+    3. goblins: 0.101
+    4. archers: 0.009
+    5. mini_pekka: 0.008
+
+crop_00022.png:
+  Source: screenshot_0018_IN_BATTLE_png.rf.c9cbdaae5fbcf7a5c84fb4d726ec94b4.jpg
+  Predicted: mega_minion (confidence: 0.876)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. mega_minion: 0.876
+    2. furnace: 0.106
+    3. knight: 0.014
+    4. minions: 0.002
+    5. musketeer: 0.001
+
+crop_00023.png:
+  Source: screenshot_0036_IN_BATTLE_png.rf.a3c27dc8d43ae61efce03a0088a4a38f.jpg
+  Predicted: tombstone (confidence: 0.706)
+  Reason: low_confidence_0.71
+  Top-5:
+    1. tombstone: 0.706
+    2. archers: 0.122
+    3. minions: 0.108
+    4. spear_goblins: 0.028
+    5. goblin_cage: 0.017
+
+crop_00024.png:
+  Source: screenshot_0036_IN_BATTLE_png.rf.a3c27dc8d43ae61efce03a0088a4a38f.jpg
+  Predicted: barbarians (confidence: 0.487)
+  Reason: low_confidence_0.49
+  Top-5:
+    1. barbarians: 0.487
+    2. mini_pekka: 0.254
+    3. goblin_brawler: 0.101
+    4. knight: 0.057
+    5. goblins: 0.056
+
+crop_00025.png:
+  Source: screenshot_0015_IN_BATTLE_png.rf.2acc5a7b7bf550c94728e649f1256beb.jpg
+  Predicted: spear_goblins (confidence: 0.874)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. spear_goblins: 0.874
+    2. goblin_brawler: 0.082
+    3. goblins: 0.024
+    4. valkyrie: 0.004
+    5. mini_pekka: 0.003
+
+crop_00026.png:
+  Source: screenshot_0058_IN_BATTLE_png.rf.0b224a683f5a281501eb7118685db3ee.jpg
+  Predicted: musketeer (confidence: 0.938)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. musketeer: 0.938
+    2. valkyrie: 0.045
+    3. knight: 0.004
+    4. minions: 0.004
+    5. archers: 0.003
+
+crop_00027.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.41c13e4d74eb3d89188a4c4367cc6ddd.jpg
+  Predicted: minions (confidence: 0.862)
+  Reason: low_confidence_0.86
+  Top-5:
+    1. minions: 0.862
+    2. mini_pekka: 0.034
+    3. knight: 0.033
+    4. furnace: 0.029
+    5. goblins: 0.015
+
+crop_00028.png:
+  Source: screenshot_0027_IN_BATTLE_png.rf.7e649c6be6447fcd7acb199f50e06fe4.jpg
+  Predicted: goblins (confidence: 0.721)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. goblins: 0.721
+    2. spear_goblins: 0.202
+    3. goblin_brawler: 0.040
+    4. barbarians: 0.015
+    5. skeletons: 0.009
+
+crop_00029.png:
+  Source: screenshot_0027_IN_BATTLE_png.rf.7e649c6be6447fcd7acb199f50e06fe4.jpg
+  Predicted: spear_goblins (confidence: 0.910)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. spear_goblins: 0.910
+    2. goblins: 0.080
+    3. goblin_brawler: 0.003
+    4. mini_pekka: 0.001
+    5. archers: 0.001
+
+crop_00030.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.c1b4d462e23d511fb7a1df6af17d7ede.jpg
+  Predicted: spear_goblins (confidence: 0.526)
+  Reason: low_confidence_0.53
+  Top-5:
+    1. spear_goblins: 0.526
+    2. goblin_brawler: 0.132
+    3. mini_pekka: 0.107
+    4. goblins: 0.065
+    5. goblin_cage: 0.055
+
+crop_00031.png:
+  Source: screenshot_0006_IN_BATTLE_png.rf.693df3ec2767caf0e2287b940dae1a41.jpg
+  Predicted: mega_minion (confidence: 0.517)
+  Reason: low_confidence_0.52
+  Top-5:
+    1. mega_minion: 0.517
+    2. musketeer: 0.360
+    3. knight: 0.080
+    4. furnace: 0.024
+    5. minions: 0.009
+
+crop_00032.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.c62fa20c4c2dd67cbd51ff7d08095364.jpg
+  Predicted: spear_goblins (confidence: 0.545)
+  Reason: low_confidence_0.55
+  Top-5:
+    1. spear_goblins: 0.545
+    2. goblins: 0.238
+    3. musketeer: 0.149
+    4. archers: 0.022
+    5. goblin_brawler: 0.011
+
+crop_00033.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.c62fa20c4c2dd67cbd51ff7d08095364.jpg
+  Predicted: spear_goblins (confidence: 0.697)
+  Reason: low_confidence_0.70
+  Top-5:
+    1. spear_goblins: 0.697
+    2. skeletons: 0.104
+    3. fire_spirit: 0.101
+    4. goblins: 0.034
+    5. archers: 0.020
+
+crop_00034.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.c62fa20c4c2dd67cbd51ff7d08095364.jpg
+  Predicted: spear_goblins (confidence: 0.588)
+  Reason: low_confidence_0.59
+  Top-5:
+    1. spear_goblins: 0.588
+    2. fire_spirit: 0.263
+    3. skeletons: 0.064
+    4. goblins: 0.020
+    5. musketeer: 0.016
+
+crop_00035.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.c62fa20c4c2dd67cbd51ff7d08095364.jpg
+  Predicted: spear_goblins (confidence: 0.826)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. spear_goblins: 0.826
+    2. fire_spirit: 0.077
+    3. goblins: 0.047
+    4. skeletons: 0.020
+    5. archers: 0.010
+
+crop_00036.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.877b7b5da56e5dd88b2b88bd7598ab37.jpg
+  Predicted: furnace (confidence: 0.507)
+  Reason: low_confidence_0.51
+  Top-5:
+    1. furnace: 0.507
+    2. mini_pekka: 0.137
+    3. archers: 0.113
+    4. knight: 0.088
+    5. bomber: 0.065
+
+crop_00037.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.877b7b5da56e5dd88b2b88bd7598ab37.jpg
+  Predicted: barbarians (confidence: 0.877)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. barbarians: 0.877
+    2. valkyrie: 0.052
+    3. knight: 0.044
+    4. mini_pekka: 0.012
+    5. goblin_brawler: 0.007
+
+crop_00038.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.877b7b5da56e5dd88b2b88bd7598ab37.jpg
+  Predicted: skeletons (confidence: 0.926)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. skeletons: 0.926
+    2. fire_spirit: 0.058
+    3. barbarians: 0.007
+    4. spear_goblins: 0.003
+    5. bomber: 0.002
+
+crop_00039.png:
+  Source: screenshot_0037_IN_BATTLE_png.rf.8fbe249ac71f81d89bdae74b6cc9e4c4.jpg
+  Predicted: furnace (confidence: 0.474)
+  Reason: low_confidence_0.47
+  Top-5:
+    1. furnace: 0.474
+    2. minions: 0.138
+    3. mega_minion: 0.091
+    4. spear_goblins: 0.061
+    5. goblin_cage: 0.049
+
+crop_00040.png:
+  Source: screenshot_0037_IN_BATTLE_png.rf.8fbe249ac71f81d89bdae74b6cc9e4c4.jpg
+  Predicted: archers (confidence: 0.709)
+  Reason: low_confidence_0.71
+  Top-5:
+    1. archers: 0.709
+    2. skeletons: 0.218
+    3. mini_pekka: 0.046
+    4. bomber: 0.012
+    5. valkyrie: 0.005
+
+crop_00041.png:
+  Source: screenshot_0037_IN_BATTLE_png.rf.8fbe249ac71f81d89bdae74b6cc9e4c4.jpg
+  Predicted: archers (confidence: 0.426)
+  Reason: low_confidence_0.43
+  Top-5:
+    1. archers: 0.426
+    2. musketeer: 0.293
+    3. goblins: 0.148
+    4. minions: 0.063
+    5. skeletons: 0.025
+
+crop_00042.png:
+  Source: screenshot_0039_IN_BATTLE_png.rf.e90e60eaa0e2753c433f6f25c9853c35.jpg
+  Predicted: goblins (confidence: 0.446)
+  Reason: low_confidence_0.45
+  Top-5:
+    1. goblins: 0.446
+    2. archers: 0.219
+    3. spear_goblins: 0.184
+    4. skeletons: 0.082
+    5. musketeer: 0.038
+
+crop_00043.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.6c32dbb99ccf64f41cf22b76edcb7cfa.jpg
+  Predicted: spear_goblins (confidence: 0.922)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. spear_goblins: 0.922
+    2. goblins: 0.041
+    3. goblin_brawler: 0.013
+    4. barbarians: 0.007
+    5. mini_pekka: 0.005
+
+crop_00044.png:
+  Source: screenshot_0038_IN_BATTLE_png.rf.2498c3db1c0e4480f5e03bb42972b542.jpg
+  Predicted: minions (confidence: 0.738)
+  Reason: low_confidence_0.74
+  Top-5:
+    1. minions: 0.738
+    2. mini_pekka: 0.260
+    3. mega_minion: 0.001
+    4. spear_goblins: 0.001
+    5. knight: 0.000
+
+crop_00045.png:
+  Source: screenshot_0038_IN_BATTLE_png.rf.2498c3db1c0e4480f5e03bb42972b542.jpg
+  Predicted: spear_goblins (confidence: 0.838)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. spear_goblins: 0.838
+    2. barbarians: 0.150
+    3. archers: 0.005
+    4. goblins: 0.004
+    5. goblin_brawler: 0.001
+
+crop_00046.png:
+  Source: screenshot_0067_IN_BATTLE_png.rf.f1c60887163a81dd9b7cebde2b5bead4.jpg
+  Predicted: spear_goblins (confidence: 0.845)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. spear_goblins: 0.845
+    2. goblins: 0.074
+    3. archers: 0.026
+    4. musketeer: 0.021
+    5. skeletons: 0.010
+
+crop_00047.png:
+  Source: screenshot_0067_IN_BATTLE_png.rf.f1c60887163a81dd9b7cebde2b5bead4.jpg
+  Predicted: minions (confidence: 0.705)
+  Reason: low_confidence_0.70
+  Top-5:
+    1. minions: 0.705
+    2. skeletons: 0.214
+    3. goblins: 0.045
+    4. spear_goblins: 0.022
+    5. archers: 0.007
+
+crop_00048.png:
+  Source: screenshot_0033_IN_BATTLE_png.rf.f964c541913c635166a376c139f26e06.jpg
+  Predicted: mini_pekka (confidence: 0.937)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. mini_pekka: 0.937
+    2. minions: 0.045
+    3. musketeer: 0.007
+    4. bomber: 0.007
+    5. furnace: 0.002
+
+crop_00049.png:
+  Source: screenshot_0033_IN_BATTLE_png.rf.f964c541913c635166a376c139f26e06.jpg
+  Predicted: goblins (confidence: 0.941)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. goblins: 0.941
+    2. spear_goblins: 0.056
+    3. musketeer: 0.001
+    4. archers: 0.001
+    5. minions: 0.000
+
+crop_00050.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.df061c1059f2121068015adb558cb3b9.jpg
+  Predicted: mega_minion (confidence: 0.947)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. mega_minion: 0.947
+    2. furnace: 0.021
+    3. minions: 0.012
+    4. valkyrie: 0.011
+    5. knight: 0.004
+
+crop_00051.png:
+  Source: screenshot_0069_IN_BATTLE_png.rf.983e5842599f949b8eef9e31895a0777.jpg
+  Predicted: minions (confidence: 0.921)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. minions: 0.921
+    2. mini_pekka: 0.077
+    3. mega_minion: 0.001
+    4. knight: 0.000
+    5. furnace: 0.000
+
+crop_00052.png:
+  Source: screenshot_0042_IN_BATTLE_png.rf.15f4879671309fdbd383dfba0e8e270c.jpg
+  Predicted: valkyrie (confidence: 0.634)
+  Reason: low_confidence_0.63
+  Top-5:
+    1. valkyrie: 0.634
+    2. spear_goblins: 0.221
+    3. archers: 0.099
+    4. musketeer: 0.017
+    5. minions: 0.011
+
+crop_00053.png:
+  Source: screenshot_0025_IN_BATTLE_png.rf.d1b85e0f0fb01c464d2e98d3b601d22a.jpg
+  Predicted: minions (confidence: 0.944)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. minions: 0.944
+    2. mini_pekka: 0.023
+    3. knight: 0.011
+    4. furnace: 0.009
+    5. mega_minion: 0.005
+
+crop_00054.png:
+  Source: screenshot_0062_IN_BATTLE_png.rf.3b58e6a96e2dbf0aceae5e290cbd7456.jpg
+  Predicted: minions (confidence: 0.615)
+  Reason: low_confidence_0.61
+  Top-5:
+    1. minions: 0.615
+    2. valkyrie: 0.370
+    3. knight: 0.004
+    4. giant: 0.003
+    5. mini_pekka: 0.002
+
+crop_00055.png:
+  Source: screenshot_0054_IN_BATTLE_png.rf.4286b620a9c15e86845e9a4280b7b5cd.jpg
+  Predicted: musketeer (confidence: 0.944)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. musketeer: 0.944
+    2. mini_pekka: 0.052
+    3. bomber: 0.002
+    4. mega_minion: 0.001
+    5. giant: 0.000
+
+crop_00056.png:
+  Source: screenshot_0047_IN_BATTLE_png.rf.e915a1885a52487f9f15f6338e73de27.jpg
+  Predicted: spear_goblins (confidence: 0.861)
+  Reason: low_confidence_0.86
+  Top-5:
+    1. spear_goblins: 0.861
+    2. goblins: 0.127
+    3. minions: 0.010
+    4. archers: 0.002
+    5. barbarians: 0.000
+
+crop_00057.png:
+  Source: screenshot_0047_IN_BATTLE_png.rf.e915a1885a52487f9f15f6338e73de27.jpg
+  Predicted: spear_goblins (confidence: 0.525)
+  Reason: low_confidence_0.52
+  Top-5:
+    1. spear_goblins: 0.525
+    2. goblins: 0.400
+    3. goblin_brawler: 0.039
+    4. skeletons: 0.016
+    5. archers: 0.007
+
+crop_00058.png:
+  Source: screenshot_0047_IN_BATTLE_png.rf.e915a1885a52487f9f15f6338e73de27.jpg
+  Predicted: spear_goblins (confidence: 0.448)
+  Reason: low_confidence_0.45
+  Top-5:
+    1. spear_goblins: 0.448
+    2. goblins: 0.403
+    3. skeletons: 0.139
+    4. fire_spirit: 0.003
+    5. musketeer: 0.002
+
+crop_00059.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.fbe30320e63ee977debcc60c5f605213.jpg
+  Predicted: barbarians (confidence: 0.724)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. barbarians: 0.724
+    2. valkyrie: 0.052
+    3. mini_pekka: 0.047
+    4. giant: 0.024
+    5. goblin_brawler: 0.023
+
+crop_00060.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.fbe30320e63ee977debcc60c5f605213.jpg
+  Predicted: giant (confidence: 0.295)
+  Reason: low_confidence_0.29
+  Top-5:
+    1. giant: 0.295
+    2. bomber: 0.237
+    3. archers: 0.199
+    4. barbarians: 0.101
+    5. mini_pekka: 0.033
+
+crop_00061.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.fbe30320e63ee977debcc60c5f605213.jpg
+  Predicted: bomber (confidence: 0.949)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. bomber: 0.949
+    2. skeletons: 0.048
+    3. archers: 0.002
+    4. spear_goblins: 0.000
+    5. cannon: 0.000
+
+crop_00062.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.fbe30320e63ee977debcc60c5f605213.jpg
+  Predicted: spear_goblins (confidence: 0.732)
+  Reason: low_confidence_0.73
+  Top-5:
+    1. spear_goblins: 0.732
+    2. goblins: 0.260
+    3. skeletons: 0.004
+    4. archers: 0.001
+    5. fire_spirit: 0.001
+
+crop_00063.png:
+  Source: screenshot_0091_IN_BATTLE_png.rf.22742722f904e1ced813ad768fc93103.jpg
+  Predicted: goblins (confidence: 0.494)
+  Reason: low_confidence_0.49
+  Top-5:
+    1. goblins: 0.494
+    2. spear_goblins: 0.476
+    3. skeletons: 0.012
+    4. archers: 0.004
+    5. goblin_brawler: 0.003
+
+crop_00064.png:
+  Source: screenshot_0091_IN_BATTLE_png.rf.22742722f904e1ced813ad768fc93103.jpg
+  Predicted: minions (confidence: 0.375)
+  Reason: low_confidence_0.38
+  Top-5:
+    1. minions: 0.375
+    2. skeletons: 0.269
+    3. spear_goblins: 0.130
+    4. goblins: 0.123
+    5. musketeer: 0.074
+
+crop_00065.png:
+  Source: screenshot_0006_IN_BATTLE_png.rf.b5cbe2949aaafe626e30e2e922fa1fb1.jpg
+  Predicted: goblin_brawler (confidence: 0.912)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. goblin_brawler: 0.912
+    2. giant: 0.025
+    3. spear_goblins: 0.014
+    4. knight: 0.009
+    5. mega_minion: 0.009
+
+crop_00066.png:
+  Source: screenshot_0006_IN_BATTLE_png.rf.b5cbe2949aaafe626e30e2e922fa1fb1.jpg
+  Predicted: spear_goblins (confidence: 0.843)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. spear_goblins: 0.843
+    2. goblin_brawler: 0.063
+    3. goblins: 0.051
+    4. archers: 0.029
+    5. minions: 0.004
+
+crop_00067.png:
+  Source: screenshot_0072_IN_BATTLE_png.rf.968ac5729b53f59b74a79eed8b0abc2a.jpg
+  Predicted: minions (confidence: 0.821)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. minions: 0.821
+    2. mega_minion: 0.101
+    3. knight: 0.046
+    4. furnace: 0.016
+    5. mini_pekka: 0.013
+
+crop_00068.png:
+  Source: screenshot_0072_IN_BATTLE_png.rf.968ac5729b53f59b74a79eed8b0abc2a.jpg
+  Predicted: spear_goblins (confidence: 0.778)
+  Reason: low_confidence_0.78
+  Top-5:
+    1. spear_goblins: 0.778
+    2. goblins: 0.211
+    3. skeletons: 0.008
+    4. archers: 0.001
+    5. minions: 0.000
+
+crop_00069.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.c094ee644dd82026536b0ad730285695.jpg
+  Predicted: mini_pekka (confidence: 0.537)
+  Reason: low_confidence_0.54
+  Top-5:
+    1. mini_pekka: 0.537
+    2. furnace: 0.220
+    3. battle_ram: 0.138
+    4. knight: 0.037
+    5. minions: 0.028
+
+crop_00070.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.c094ee644dd82026536b0ad730285695.jpg
+  Predicted: minions (confidence: 0.920)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. minions: 0.920
+    2. furnace: 0.075
+    3. knight: 0.003
+    4. mega_minion: 0.001
+    5. barbarians: 0.000
+
+crop_00071.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.9e86433760ee6b52a0ffa000f385bf0f.jpg
+  Predicted: valkyrie (confidence: 0.643)
+  Reason: low_confidence_0.64
+  Top-5:
+    1. valkyrie: 0.643
+    2. barbarians: 0.326
+    3. mini_pekka: 0.019
+    4. knight: 0.009
+    5. goblin_hut: 0.001
+
+crop_00072.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.9e86433760ee6b52a0ffa000f385bf0f.jpg
+  Predicted: valkyrie (confidence: 0.680)
+  Reason: low_confidence_0.68
+  Top-5:
+    1. valkyrie: 0.680
+    2. mini_pekka: 0.104
+    3. barbarians: 0.063
+    4. knight: 0.053
+    5. goblin_hut: 0.032
+
+crop_00073.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.9e86433760ee6b52a0ffa000f385bf0f.jpg
+  Predicted: skeletons (confidence: 0.784)
+  Reason: low_confidence_0.78
+  Top-5:
+    1. skeletons: 0.784
+    2. bomber: 0.125
+    3. fire_spirit: 0.037
+    4. spear_goblins: 0.017
+    5. barbarians: 0.014
+
+crop_00074.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.61ec755c137191850aaeb5124a8e4a70.jpg
+  Predicted: spear_goblins (confidence: 0.920)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. spear_goblins: 0.920
+    2. musketeer: 0.069
+    3. mini_pekka: 0.004
+    4. goblins: 0.004
+    5. archers: 0.002
+
+crop_00075.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.61ec755c137191850aaeb5124a8e4a70.jpg
+  Predicted: spear_goblins (confidence: 0.434)
+  Reason: low_confidence_0.43
+  Top-5:
+    1. spear_goblins: 0.434
+    2. knight: 0.371
+    3. musketeer: 0.085
+    4. bomber: 0.029
+    5. mini_pekka: 0.020
+
+crop_00076.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.61bed220b0acecb738da3c3d8c5a94f8.jpg
+  Predicted: mini_pekka (confidence: 0.512)
+  Reason: low_confidence_0.51
+  Top-5:
+    1. mini_pekka: 0.512
+    2. minions: 0.447
+    3. musketeer: 0.017
+    4. barbarians: 0.008
+    5. goblins: 0.005
+
+crop_00077.png:
+  Source: screenshot_0008_IN_BATTLE_png.rf.cc7e99f4b81efc44771a913d341d6c08.jpg
+  Predicted: bomber (confidence: 0.332)
+  Reason: low_confidence_0.33
+  Top-5:
+    1. bomber: 0.332
+    2. mini_pekka: 0.244
+    3. skeletons: 0.237
+    4. musketeer: 0.061
+    5. archers: 0.055
+
+crop_00078.png:
+  Source: screenshot_0027_IN_BATTLE_png.rf.365521b189d96c4df29520a31ba0342b.jpg
+  Predicted: skeletons (confidence: 0.722)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. skeletons: 0.722
+    2. minions: 0.226
+    3. spear_goblins: 0.031
+    4. goblins: 0.008
+    5. musketeer: 0.005
+
+crop_00079.png:
+  Source: screenshot_0053_IN_BATTLE_png.rf.e7cffb75593435f65950003f6041ec09.jpg
+  Predicted: knight (confidence: 0.944)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. knight: 0.944
+    2. musketeer: 0.032
+    3. minions: 0.011
+    4. archers: 0.005
+    5. furnace: 0.002
+
+crop_00080.png:
+  Source: screenshot_0070_IN_BATTLE_png.rf.63bac892026604aa8aa734cbe62808df.jpg
+  Predicted: barbarians (confidence: 0.538)
+  Reason: low_confidence_0.54
+  Top-5:
+    1. barbarians: 0.538
+    2. fire_spirit: 0.142
+    3. goblins: 0.139
+    4. goblin_brawler: 0.060
+    5. spear_goblins: 0.037
+
+crop_00081.png:
+  Source: screenshot_0070_IN_BATTLE_png.rf.63bac892026604aa8aa734cbe62808df.jpg
+  Predicted: minions (confidence: 0.908)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. minions: 0.908
+    2. spear_goblins: 0.059
+    3. barbarians: 0.008
+    4. mini_pekka: 0.006
+    5. knight: 0.004
+
+crop_00082.png:
+  Source: screenshot_0012_IN_BATTLE_png.rf.03531b11b927879741ec2e73228cc87d.jpg
+  Predicted: barbarians (confidence: 0.514)
+  Reason: low_confidence_0.51
+  Top-5:
+    1. barbarians: 0.514
+    2. skeletons: 0.176
+    3. musketeer: 0.132
+    4. spear_goblins: 0.084
+    5. mini_pekka: 0.041
+
+crop_00083.png:
+  Source: screenshot_0107_IN_BATTLE_png.rf.41abd3529883f508f564941204e5976e.jpg
+  Predicted: spear_goblins (confidence: 0.909)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. spear_goblins: 0.909
+    2. knight: 0.035
+    3. goblin_hut: 0.011
+    4. mini_pekka: 0.010
+    5. goblins: 0.009
+
+crop_00084.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.12c8742a5d4c1670defb51cf7cee4005.jpg
+  Predicted: goblins (confidence: 0.873)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. goblins: 0.873
+    2. spear_goblins: 0.096
+    3. goblin_brawler: 0.019
+    4. minions: 0.007
+    5. barbarians: 0.001
+
+crop_00085.png:
+  Source: screenshot_0021_IN_BATTLE_png.rf.05b7c1678a287328926a9d67a359be2e.jpg
+  Predicted: spear_goblins (confidence: 0.871)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. spear_goblins: 0.871
+    2. goblin_brawler: 0.033
+    3. mega_minion: 0.032
+    4. furnace: 0.021
+    5. knight: 0.015
+
+crop_00086.png:
+  Source: screenshot_0021_IN_BATTLE_png.rf.05b7c1678a287328926a9d67a359be2e.jpg
+  Predicted: spear_goblins (confidence: 0.645)
+  Reason: low_confidence_0.64
+  Top-5:
+    1. spear_goblins: 0.645
+    2. goblins: 0.190
+    3. barbarians: 0.053
+    4. skeletons: 0.038
+    5. archers: 0.024
+
+crop_00087.png:
+  Source: screenshot_0021_IN_BATTLE_png.rf.05b7c1678a287328926a9d67a359be2e.jpg
+  Predicted: spear_goblins (confidence: 0.932)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. spear_goblins: 0.932
+    2. goblins: 0.032
+    3. mini_pekka: 0.012
+    4. barbarians: 0.011
+    5. archers: 0.006
+
+crop_00088.png:
+  Source: screenshot_0021_IN_BATTLE_png.rf.05b7c1678a287328926a9d67a359be2e.jpg
+  Predicted: skeletons (confidence: 0.811)
+  Reason: low_confidence_0.81
+  Top-5:
+    1. skeletons: 0.811
+    2. spear_goblins: 0.123
+    3. archers: 0.026
+    4. musketeer: 0.015
+    5. minions: 0.014
+
+crop_00089.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f83edbdabb66ca942ea4153dddf455b2.jpg
+  Predicted: cannon (confidence: 0.865)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. cannon: 0.865
+    2. mega_minion: 0.074
+    3. furnace: 0.032
+    4. musketeer: 0.025
+    5. knight: 0.001
+
+crop_00090.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f83edbdabb66ca942ea4153dddf455b2.jpg
+  Predicted: knight (confidence: 0.456)
+  Reason: low_confidence_0.46
+  Top-5:
+    1. knight: 0.456
+    2. spear_goblins: 0.307
+    3. bomber: 0.065
+    4. barbarians: 0.057
+    5. mini_pekka: 0.055
+
+crop_00091.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f83edbdabb66ca942ea4153dddf455b2.jpg
+  Predicted: goblins (confidence: 0.923)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. goblins: 0.923
+    2. spear_goblins: 0.044
+    3. goblin_brawler: 0.031
+    4. barbarians: 0.002
+    5. minions: 0.000
+
+crop_00092.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.f83edbdabb66ca942ea4153dddf455b2.jpg
+  Predicted: goblins (confidence: 0.947)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. goblins: 0.947
+    2. spear_goblins: 0.031
+    3. goblin_brawler: 0.020
+    4. barbarians: 0.001
+    5. archers: 0.000
+
+crop_00093.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.9be34af00e10e2150531320b95665a23.jpg
+  Predicted: barbarians (confidence: 0.251)
+  Reason: low_confidence_0.25
+  Top-5:
+    1. barbarians: 0.251
+    2. mini_pekka: 0.196
+    3. spear_goblins: 0.179
+    4. goblin_brawler: 0.128
+    5. valkyrie: 0.117
+
+crop_00094.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.9be34af00e10e2150531320b95665a23.jpg
+  Predicted: furnace (confidence: 0.374)
+  Reason: low_confidence_0.37
+  Top-5:
+    1. furnace: 0.374
+    2. knight: 0.202
+    3. valkyrie: 0.178
+    4. mega_minion: 0.133
+    5. bomber: 0.035
+
+crop_00095.png:
+  Source: screenshot_0035_IN_BATTLE_png.rf.9e58ab390f7ab3a257cdaa3579533ac7.jpg
+  Predicted: musketeer (confidence: 0.903)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. musketeer: 0.903
+    2. mini_pekka: 0.073
+    3. knight: 0.016
+    4. spear_goblins: 0.003
+    5. archers: 0.002
+
+crop_00096.png:
+  Source: screenshot_0035_IN_BATTLE_png.rf.9e58ab390f7ab3a257cdaa3579533ac7.jpg
+  Predicted: knight (confidence: 0.948)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. knight: 0.948
+    2. mini_pekka: 0.015
+    3. giant: 0.015
+    4. battle_ram: 0.003
+    5. musketeer: 0.003
+
+crop_00097.png:
+  Source: screenshot_0035_IN_BATTLE_png.rf.9e58ab390f7ab3a257cdaa3579533ac7.jpg
+  Predicted: furnace (confidence: 0.214)
+  Reason: low_confidence_0.21
+  Top-5:
+    1. furnace: 0.214
+    2. giant: 0.199
+    3. goblins: 0.135
+    4. knight: 0.128
+    5. battle_ram: 0.095
+
+crop_00098.png:
+  Source: screenshot_0035_IN_BATTLE_png.rf.9e58ab390f7ab3a257cdaa3579533ac7.jpg
+  Predicted: spear_goblins (confidence: 0.918)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. spear_goblins: 0.918
+    2. goblins: 0.027
+    3. goblin_brawler: 0.023
+    4. valkyrie: 0.011
+    5. archers: 0.005
+
+crop_00099.png:
+  Source: screenshot_0012_IN_BATTLE_png.rf.220df2926621730b3a98a4b1b1830ef6.jpg
+  Predicted: skeletons (confidence: 0.778)
+  Reason: low_confidence_0.78
+  Top-5:
+    1. skeletons: 0.778
+    2. goblins: 0.076
+    3. spear_goblins: 0.076
+    4. minions: 0.041
+    5. musketeer: 0.010
+
+crop_00100.png:
+  Source: screenshot_0012_IN_BATTLE_png.rf.220df2926621730b3a98a4b1b1830ef6.jpg
+  Predicted: skeletons (confidence: 0.817)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. skeletons: 0.817
+    2. minions: 0.076
+    3. goblins: 0.075
+    4. spear_goblins: 0.017
+    5. musketeer: 0.006
+
+crop_00101.png:
+  Source: screenshot_0063_IN_BATTLE_png.rf.54709f58ee3e49710c004ac8a2af9c5d.jpg
+  Predicted: musketeer (confidence: 0.821)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. musketeer: 0.821
+    2. mini_pekka: 0.157
+    3. minions: 0.014
+    4. spear_goblins: 0.002
+    5. mega_minion: 0.002
+
+crop_00102.png:
+  Source: screenshot_0063_IN_BATTLE_png.rf.54709f58ee3e49710c004ac8a2af9c5d.jpg
+  Predicted: musketeer (confidence: 0.759)
+  Reason: low_confidence_0.76
+  Top-5:
+    1. musketeer: 0.759
+    2. mini_pekka: 0.139
+    3. bomber: 0.072
+    4. cannon: 0.011
+    5. knight: 0.011
+
+crop_00103.png:
+  Source: screenshot_0043_IN_BATTLE_png.rf.8bdbde0de31e43c1ba9f5849f67e7141.jpg
+  Predicted: knight (confidence: 0.285)
+  Reason: low_confidence_0.29
+  Top-5:
+    1. knight: 0.285
+    2. giant: 0.249
+    3. mini_pekka: 0.184
+    4. valkyrie: 0.165
+    5. goblin_brawler: 0.034
+
+crop_00104.png:
+  Source: screenshot_0100_IN_BATTLE_png.rf.6dcb33e680237945918748641b6b0fdd.jpg
+  Predicted: musketeer (confidence: 0.810)
+  Reason: low_confidence_0.81
+  Top-5:
+    1. musketeer: 0.810
+    2. giant: 0.116
+    3. mini_pekka: 0.049
+    4. knight: 0.020
+    5. bomber: 0.003
+
+crop_00105.png:
+  Source: screenshot_0100_IN_BATTLE_png.rf.6dcb33e680237945918748641b6b0fdd.jpg
+  Predicted: archers (confidence: 0.865)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. archers: 0.865
+    2. mini_pekka: 0.015
+    3. musketeer: 0.012
+    4. valkyrie: 0.011
+    5. goblins: 0.011
+
+crop_00106.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.c7bfddc4401de6511fa6265389114033.jpg
+  Predicted: musketeer (confidence: 0.635)
+  Reason: low_confidence_0.63
+  Top-5:
+    1. musketeer: 0.635
+    2. mini_pekka: 0.314
+    3. minions: 0.040
+    4. spear_goblins: 0.006
+    5. knight: 0.004
+
+crop_00107.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.c7bfddc4401de6511fa6265389114033.jpg
+  Predicted: skeletons (confidence: 0.717)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. skeletons: 0.717
+    2. spear_goblins: 0.106
+    3. goblins: 0.099
+    4. minions: 0.035
+    5. archers: 0.017
+
+crop_00108.png:
+  Source: screenshot_0047_IN_BATTLE_png.rf.c672959dfe4f9e66e9bbfadd86769739.jpg
+  Predicted: goblin_brawler (confidence: 0.673)
+  Reason: low_confidence_0.67
+  Top-5:
+    1. goblin_brawler: 0.673
+    2. spear_goblins: 0.290
+    3. goblins: 0.021
+    4. barbarians: 0.004
+    5. mini_pekka: 0.004
+
+crop_00109.png:
+  Source: screenshot_0047_IN_BATTLE_png.rf.c672959dfe4f9e66e9bbfadd86769739.jpg
+  Predicted: spear_goblins (confidence: 0.929)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. spear_goblins: 0.929
+    2. goblin_brawler: 0.059
+    3. goblins: 0.008
+    4. mini_pekka: 0.001
+    5. archers: 0.001
+
+crop_00110.png:
+  Source: screenshot_0051_IN_BATTLE_png.rf.7d9ee02c57341de02b231c308ad868e8.jpg
+  Predicted: goblins (confidence: 0.496)
+  Reason: low_confidence_0.50
+  Top-5:
+    1. goblins: 0.496
+    2. spear_goblins: 0.487
+    3. minions: 0.009
+    4. archers: 0.003
+    5. barbarians: 0.001
+
+crop_00111.png:
+  Source: screenshot_0106_IN_BATTLE_png.rf.ac9db5d82f1fd836cce51de742555a8d.jpg
+  Predicted: fire_spirit (confidence: 0.588)
+  Reason: low_confidence_0.59
+  Top-5:
+    1. fire_spirit: 0.588
+    2. bomber: 0.145
+    3. musketeer: 0.077
+    4. skeletons: 0.067
+    5. spear_goblins: 0.058
+
+crop_00112.png:
+  Source: screenshot_0106_IN_BATTLE_png.rf.ac9db5d82f1fd836cce51de742555a8d.jpg
+  Predicted: spear_goblins (confidence: 0.799)
+  Reason: low_confidence_0.80
+  Top-5:
+    1. spear_goblins: 0.799
+    2. goblins: 0.177
+    3. goblin_brawler: 0.021
+    4. bomber: 0.001
+    5. barbarians: 0.001
+
+crop_00113.png:
+  Source: screenshot_0018_IN_BATTLE_png.rf.c20d5985517470011b7b4856c8ba0dfa.jpg
+  Predicted: goblins (confidence: 0.740)
+  Reason: low_confidence_0.74
+  Top-5:
+    1. goblins: 0.740
+    2. goblin_brawler: 0.175
+    3. spear_goblins: 0.042
+    4. barbarians: 0.031
+    5. archers: 0.004
+
+crop_00114.png:
+  Source: screenshot_0018_IN_BATTLE_png.rf.c20d5985517470011b7b4856c8ba0dfa.jpg
+  Predicted: spear_goblins (confidence: 0.933)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. spear_goblins: 0.933
+    2. goblins: 0.045
+    3. goblin_brawler: 0.013
+    4. minions: 0.003
+    5. mini_pekka: 0.002
+
+crop_00115.png:
+  Source: screenshot_0093_IN_BATTLE_png.rf.e64f3856cf921dcad38ebb930146fc56.jpg
+  Predicted: mini_pekka (confidence: 0.486)
+  Reason: low_confidence_0.49
+  Top-5:
+    1. mini_pekka: 0.486
+    2. spear_goblins: 0.472
+    3. archers: 0.008
+    4. furnace: 0.007
+    5. minions: 0.006
+
+crop_00116.png:
+  Source: screenshot_0061_IN_BATTLE_png.rf.45c87f5b16ac6ecc97e63cbb7f8397ce.jpg
+  Predicted: skeletons (confidence: 0.408)
+  Reason: low_confidence_0.41
+  Top-5:
+    1. skeletons: 0.408
+    2. spear_goblins: 0.266
+    3. archers: 0.088
+    4. bomber: 0.081
+    5. mini_pekka: 0.055
+
+crop_00117.png:
+  Source: screenshot_0061_IN_BATTLE_png.rf.45c87f5b16ac6ecc97e63cbb7f8397ce.jpg
+  Predicted: skeletons (confidence: 0.881)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. skeletons: 0.881
+    2. spear_goblins: 0.081
+    3. fire_spirit: 0.026
+    4. musketeer: 0.003
+    5. barbarians: 0.003
+
+crop_00118.png:
+  Source: screenshot_0007_IN_BATTLE_png.rf.1881b6401969ea83ab2eb6c168b5085f.jpg
+  Predicted: goblin_brawler (confidence: 0.827)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. goblin_brawler: 0.827
+    2. goblins: 0.124
+    3. giant: 0.040
+    4. spear_goblins: 0.003
+    5. barbarians: 0.002
+
+crop_00119.png:
+  Source: screenshot_0008_IN_BATTLE_png.rf.94ecedccdff2b70d97baff0967cdacb8.jpg
+  Predicted: minions (confidence: 0.526)
+  Reason: low_confidence_0.53
+  Top-5:
+    1. minions: 0.526
+    2. mini_pekka: 0.322
+    3. knight: 0.055
+    4. mega_minion: 0.024
+    5. musketeer: 0.019
+
+crop_00120.png:
+  Source: screenshot_0008_IN_BATTLE_png.rf.94ecedccdff2b70d97baff0967cdacb8.jpg
+  Predicted: knight (confidence: 0.723)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. knight: 0.723
+    2. mini_pekka: 0.118
+    3. mega_minion: 0.053
+    4. musketeer: 0.044
+    5. furnace: 0.034
+
+crop_00121.png:
+  Source: screenshot_0071_IN_BATTLE_png.rf.7a1cc04853e9f1797edd266ef1852b8a.jpg
+  Predicted: minions (confidence: 0.626)
+  Reason: low_confidence_0.63
+  Top-5:
+    1. minions: 0.626
+    2. mega_minion: 0.289
+    3. mini_pekka: 0.035
+    4. furnace: 0.032
+    5. knight: 0.016
+
+crop_00122.png:
+  Source: screenshot_0106_IN_BATTLE_png.rf.e436de292f66925549fafa16324b8b1f.jpg
+  Predicted: archers (confidence: 0.934)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. archers: 0.934
+    2. mini_pekka: 0.007
+    3. musketeer: 0.007
+    4. valkyrie: 0.006
+    5. goblins: 0.006
+
+crop_00123.png:
+  Source: screenshot_0106_IN_BATTLE_png.rf.e436de292f66925549fafa16324b8b1f.jpg
+  Predicted: musketeer (confidence: 0.887)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. musketeer: 0.887
+    2. furnace: 0.085
+    3. mega_minion: 0.015
+    4. skeletons: 0.005
+    5. knight: 0.002
+
+crop_00124.png:
+  Source: screenshot_0058_IN_BATTLE_png.rf.7e1401f555b16a710ae784e15662308e.jpg
+  Predicted: archers (confidence: 0.929)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. archers: 0.929
+    2. musketeer: 0.010
+    3. valkyrie: 0.007
+    4. goblin_brawler: 0.006
+    5. giant: 0.006
+
+crop_00125.png:
+  Source: screenshot_0045_IN_BATTLE_png.rf.216dac7c9927dc5fe00109b62c328d20.jpg
+  Predicted: spear_goblins (confidence: 0.882)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. spear_goblins: 0.882
+    2. goblins: 0.075
+    3. goblin_brawler: 0.013
+    4. skeletons: 0.009
+    5. archers: 0.008
+
+crop_00126.png:
+  Source: screenshot_0038_IN_BATTLE_png.rf.7e58daf6e3e1ee50694209b05a660553.jpg
+  Predicted: archers (confidence: 0.922)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. archers: 0.922
+    2. giant: 0.018
+    3. goblins: 0.015
+    4. mini_pekka: 0.010
+    5. valkyrie: 0.010
+
+crop_00127.png:
+  Source: screenshot_0007_IN_BATTLE_png.rf.158e91caf9d5ab8ecbf34dd5c5fdab81.jpg
+  Predicted: knight (confidence: 0.226)
+  Reason: low_confidence_0.23
+  Top-5:
+    1. knight: 0.226
+    2. minions: 0.223
+    3. musketeer: 0.163
+    4. mini_pekka: 0.113
+    5. giant: 0.097
+
+crop_00128.png:
+  Source: screenshot_0046_IN_BATTLE_png.rf.7db370144ef4f7653c8aa017c07ddc4e.jpg
+  Predicted: spear_goblins (confidence: 0.715)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. spear_goblins: 0.715
+    2. archers: 0.246
+    3. minions: 0.022
+    4. goblins: 0.012
+    5. musketeer: 0.003
+
+crop_00129.png:
+  Source: screenshot_0046_IN_BATTLE_png.rf.7db370144ef4f7653c8aa017c07ddc4e.jpg
+  Predicted: spear_goblins (confidence: 0.897)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. spear_goblins: 0.897
+    2. goblins: 0.066
+    3. minions: 0.021
+    4. archers: 0.009
+    5. goblin_cage: 0.001
+
+crop_00130.png:
+  Source: screenshot_0046_IN_BATTLE_png.rf.7db370144ef4f7653c8aa017c07ddc4e.jpg
+  Predicted: mini_pekka (confidence: 0.924)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. mini_pekka: 0.924
+    2. archers: 0.028
+    3. barbarians: 0.024
+    4. valkyrie: 0.014
+    5. knight: 0.005
+
+crop_00131.png:
+  Source: screenshot_0006_IN_BATTLE_png.rf.febcda0cc9af508ce260dadc2ecd71d0.jpg
+  Predicted: bomber (confidence: 0.835)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. bomber: 0.835
+    2. cannon: 0.159
+    3. mini_pekka: 0.001
+    4. tombstone: 0.001
+    5. skeletons: 0.001
+
+crop_00132.png:
+  Source: screenshot_0006_IN_BATTLE_png.rf.febcda0cc9af508ce260dadc2ecd71d0.jpg
+  Predicted: skeletons (confidence: 0.942)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. skeletons: 0.942
+    2. barbarians: 0.042
+    3. spear_goblins: 0.005
+    4. furnace: 0.002
+    5. mini_pekka: 0.001
+
+crop_00133.png:
+  Source: screenshot_0057_IN_BATTLE_png.rf.17f22bcf773719bee07218380b4aa3c1.jpg
+  Predicted: musketeer (confidence: 0.889)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. musketeer: 0.889
+    2. mega_minion: 0.095
+    3. spear_goblins: 0.009
+    4. furnace: 0.005
+    5. knight: 0.001
+
+crop_00134.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.c6d286d19ab8e8306a7fe92ddb30035c.jpg
+  Predicted: giant (confidence: 0.653)
+  Reason: low_confidence_0.65
+  Top-5:
+    1. giant: 0.653
+    2. battle_ram: 0.177
+    3. knight: 0.046
+    4. furnace: 0.042
+    5. barbarians: 0.028
+
+crop_00135.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.c6d286d19ab8e8306a7fe92ddb30035c.jpg
+  Predicted: spear_goblins (confidence: 0.829)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. spear_goblins: 0.829
+    2. goblin_brawler: 0.134
+    3. furnace: 0.013
+    4. mini_pekka: 0.011
+    5. knight: 0.005
+
+crop_00136.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.c6d286d19ab8e8306a7fe92ddb30035c.jpg
+  Predicted: knight (confidence: 0.620)
+  Reason: low_confidence_0.62
+  Top-5:
+    1. knight: 0.620
+    2. minions: 0.370
+    3. battle_ram: 0.004
+    4. goblin_hut: 0.002
+    5. mini_pekka: 0.001
+
+crop_00137.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.c6d286d19ab8e8306a7fe92ddb30035c.jpg
+  Predicted: knight (confidence: 0.545)
+  Reason: low_confidence_0.55
+  Top-5:
+    1. knight: 0.545
+    2. minions: 0.414
+    3. furnace: 0.017
+    4. mega_minion: 0.013
+    5. battle_ram: 0.003
+
+crop_00138.png:
+  Source: screenshot_0017_IN_BATTLE_png.rf.645b8eab38f77507e5919b54ceb1dd4e.jpg
+  Predicted: goblins (confidence: 0.867)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. goblins: 0.867
+    2. spear_goblins: 0.058
+    3. mini_pekka: 0.019
+    4. minions: 0.013
+    5. musketeer: 0.012
+
+crop_00139.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.540a1012e374ea304a002eee87989a8f.jpg
+  Predicted: valkyrie (confidence: 0.949)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. valkyrie: 0.949
+    2. battle_ram: 0.014
+    3. mini_pekka: 0.009
+    4. goblin_hut: 0.008
+    5. furnace: 0.006
+
+crop_00140.png:
+  Source: screenshot_0024_IN_BATTLE_png.rf.632cc7bc83a840d3a0a27b90a09e88b6.jpg
+  Predicted: giant (confidence: 0.368)
+  Reason: low_confidence_0.37
+  Top-5:
+    1. giant: 0.368
+    2. furnace: 0.183
+    3. skeletons: 0.169
+    4. mini_pekka: 0.110
+    5. barbarians: 0.033
+
+crop_00141.png:
+  Source: screenshot_0024_IN_BATTLE_png.rf.632cc7bc83a840d3a0a27b90a09e88b6.jpg
+  Predicted: barbarians (confidence: 0.405)
+  Reason: low_confidence_0.40
+  Top-5:
+    1. barbarians: 0.405
+    2. goblins: 0.333
+    3. spear_goblins: 0.097
+    4. skeletons: 0.048
+    5. furnace: 0.045
+
+crop_00142.png:
+  Source: screenshot_0028_IN_BATTLE_png.rf.d6e5e66ab31882acef536caa54b51fbe.jpg
+  Predicted: spear_goblins (confidence: 0.876)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. spear_goblins: 0.876
+    2. skeletons: 0.064
+    3. goblins: 0.019
+    4. bomber: 0.014
+    5. archers: 0.013
+
+crop_00143.png:
+  Source: screenshot_0028_IN_BATTLE_png.rf.d6e5e66ab31882acef536caa54b51fbe.jpg
+  Predicted: spear_goblins (confidence: 0.869)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. spear_goblins: 0.869
+    2. skeletons: 0.107
+    3. bomber: 0.016
+    4. archers: 0.003
+    5. goblin_brawler: 0.001
+
+crop_00144.png:
+  Source: screenshot_0097_IN_BATTLE_png.rf.2be84024acb9d4d5c3273268d5bd0987.jpg
+  Predicted: goblins (confidence: 0.948)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. goblins: 0.948
+    2. spear_goblins: 0.018
+    3. mini_pekka: 0.014
+    4. barbarians: 0.005
+    5. minions: 0.004
+
+crop_00145.png:
+  Source: screenshot_0019_IN_BATTLE_png.rf.c5100dc1660f4379cebab7da6d63a5c5.jpg
+  Predicted: knight (confidence: 0.902)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. knight: 0.902
+    2. mini_pekka: 0.039
+    3. valkyrie: 0.020
+    4. archers: 0.018
+    5. spear_goblins: 0.004
+
+crop_00146.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.ad2884f8afc7e980032bb6e53188fa4b.jpg
+  Predicted: battle_ram (confidence: 0.296)
+  Reason: low_confidence_0.30
+  Top-5:
+    1. battle_ram: 0.296
+    2. furnace: 0.265
+    3. minions: 0.093
+    4. giant: 0.070
+    5. goblins: 0.039
+
+crop_00147.png:
+  Source: screenshot_0034_IN_BATTLE_png.rf.ad2884f8afc7e980032bb6e53188fa4b.jpg
+  Predicted: mini_pekka (confidence: 0.658)
+  Reason: low_confidence_0.66
+  Top-5:
+    1. mini_pekka: 0.658
+    2. furnace: 0.284
+    3. knight: 0.032
+    4. minions: 0.007
+    5. mega_minion: 0.007
+
+crop_00148.png:
+  Source: screenshot_0039_IN_BATTLE_png.rf.4a3b1621cc82cf08f2d089e95aa9e8d8.jpg
+  Predicted: goblin_brawler (confidence: 0.852)
+  Reason: low_confidence_0.85
+  Top-5:
+    1. goblin_brawler: 0.852
+    2. goblins: 0.067
+    3. giant: 0.034
+    4. barbarians: 0.022
+    5. goblin_hut: 0.012
+
+crop_00149.png:
+  Source: screenshot_0039_IN_BATTLE_png.rf.4a3b1621cc82cf08f2d089e95aa9e8d8.jpg
+  Predicted: mega_minion (confidence: 0.870)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. mega_minion: 0.870
+    2. knight: 0.051
+    3. mini_pekka: 0.043
+    4. furnace: 0.017
+    5. spear_goblins: 0.010
+
+crop_00150.png:
+  Source: screenshot_0051_IN_BATTLE_png.rf.11b1296bdf211d500ef5a6922fcb9775.jpg
+  Predicted: furnace (confidence: 0.918)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. furnace: 0.918
+    2. mega_minion: 0.028
+    3. knight: 0.020
+    4. goblin_cage: 0.010
+    5. battle_ram: 0.007
+
+crop_00151.png:
+  Source: screenshot_0055_IN_BATTLE_png.rf.cf47733514ad73acbd12a859c8d9255a.jpg
+  Predicted: musketeer (confidence: 0.946)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. musketeer: 0.946
+    2. knight: 0.039
+    3. mega_minion: 0.010
+    4. furnace: 0.002
+    5. cannon: 0.000
+
+crop_00152.png:
+  Source: screenshot_0076_IN_BATTLE_png.rf.6cdfedb9d00743cdb5726dcb954ed5e4.jpg
+  Predicted: mini_pekka (confidence: 0.885)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. mini_pekka: 0.885
+    2. minions: 0.084
+    3. goblin_cage: 0.015
+    4. knight: 0.008
+    5. furnace: 0.003
+
+crop_00153.png:
+  Source: screenshot_0050_IN_BATTLE_png.rf.254b6660feb520a42adc4713a0d680d4.jpg
+  Predicted: giant (confidence: 0.700)
+  Reason: low_confidence_0.70
+  Top-5:
+    1. giant: 0.700
+    2. barbarians: 0.174
+    3. knight: 0.038
+    4. goblins: 0.036
+    5. mini_pekka: 0.034
+
+crop_00154.png:
+  Source: screenshot_0050_IN_BATTLE_png.rf.254b6660feb520a42adc4713a0d680d4.jpg
+  Predicted: valkyrie (confidence: 0.525)
+  Reason: low_confidence_0.52
+  Top-5:
+    1. valkyrie: 0.525
+    2. barbarians: 0.353
+    3. knight: 0.040
+    4. mini_pekka: 0.023
+    5. archers: 0.017
+
+crop_00155.png:
+  Source: screenshot_0050_IN_BATTLE_png.rf.254b6660feb520a42adc4713a0d680d4.jpg
+  Predicted: mega_minion (confidence: 0.775)
+  Reason: low_confidence_0.78
+  Top-5:
+    1. mega_minion: 0.775
+    2. furnace: 0.218
+    3. knight: 0.004
+    4. mini_pekka: 0.002
+    5. minions: 0.001
+
+crop_00156.png:
+  Source: screenshot_0050_IN_BATTLE_png.rf.254b6660feb520a42adc4713a0d680d4.jpg
+  Predicted: skeletons (confidence: 0.791)
+  Reason: low_confidence_0.79
+  Top-5:
+    1. skeletons: 0.791
+    2. barbarians: 0.117
+    3. fire_spirit: 0.044
+    4. spear_goblins: 0.019
+    5. bomber: 0.010
+
+crop_00157.png:
+  Source: screenshot_0010_IN_BATTLE_png.rf.36647d077257e34cfa712ae2d32c48f1.jpg
+  Predicted: goblins (confidence: 0.891)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. goblins: 0.891
+    2. goblin_brawler: 0.085
+    3. spear_goblins: 0.017
+    4. archers: 0.003
+    5. barbarians: 0.002
+
+crop_00158.png:
+  Source: screenshot_0010_IN_BATTLE_png.rf.36647d077257e34cfa712ae2d32c48f1.jpg
+  Predicted: goblins (confidence: 0.782)
+  Reason: low_confidence_0.78
+  Top-5:
+    1. goblins: 0.782
+    2. spear_goblins: 0.210
+    3. goblin_brawler: 0.006
+    4. minions: 0.001
+    5. barbarians: 0.001
+
+crop_00159.png:
+  Source: screenshot_0065_IN_BATTLE_png.rf.14b8746e24b707a84aa6eeb216741817.jpg
+  Predicted: knight (confidence: 0.824)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. knight: 0.824
+    2. furnace: 0.110
+    3. goblin_cage: 0.034
+    4. mega_minion: 0.011
+    5. goblins: 0.004
+
+crop_00160.png:
+  Source: screenshot_0065_IN_BATTLE_png.rf.14b8746e24b707a84aa6eeb216741817.jpg
+  Predicted: mini_pekka (confidence: 0.828)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. mini_pekka: 0.828
+    2. minions: 0.054
+    3. furnace: 0.037
+    4. barbarians: 0.020
+    5. knight: 0.015
+
+crop_00161.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.d5c150e780b082ad89bf1ec29308b146.jpg
+  Predicted: archers (confidence: 0.875)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. archers: 0.875
+    2. musketeer: 0.034
+    3. knight: 0.027
+    4. mini_pekka: 0.025
+    5. valkyrie: 0.011
+
+crop_00162.png:
+  Source: screenshot_0046_IN_BATTLE_png.rf.b312556eb225e24cfafe40da2931290e.jpg
+  Predicted: goblin_brawler (confidence: 0.935)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. goblin_brawler: 0.935
+    2. spear_goblins: 0.026
+    3. giant: 0.023
+    4. mini_pekka: 0.010
+    5. knight: 0.002
+
+crop_00163.png:
+  Source: screenshot_0055_IN_BATTLE_png.rf.991cd97db7001e5e4b124e7fd43ce5ea.jpg
+  Predicted: mini_pekka (confidence: 0.944)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. mini_pekka: 0.944
+    2. battle_ram: 0.034
+    3. bomber: 0.007
+    4. minions: 0.003
+    5. valkyrie: 0.003
+
+crop_00164.png:
+  Source: screenshot_0025_IN_BATTLE_png.rf.6eaa6fd90f8735142ce93a029c1e8252.jpg
+  Predicted: knight (confidence: 0.630)
+  Reason: low_confidence_0.63
+  Top-5:
+    1. knight: 0.630
+    2. minions: 0.221
+    3. valkyrie: 0.033
+    4. mini_pekka: 0.027
+    5. musketeer: 0.022
+
+crop_00165.png:
+  Source: screenshot_0025_IN_BATTLE_png.rf.6eaa6fd90f8735142ce93a029c1e8252.jpg
+  Predicted: mega_minion (confidence: 0.887)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. mega_minion: 0.887
+    2. knight: 0.058
+    3. minions: 0.029
+    4. furnace: 0.020
+    5. barbarians: 0.002
+
+crop_00166.png:
+  Source: screenshot_0025_IN_BATTLE_png.rf.6eaa6fd90f8735142ce93a029c1e8252.jpg
+  Predicted: bomber (confidence: 0.894)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. bomber: 0.894
+    2. mini_pekka: 0.063
+    3. minions: 0.030
+    4. musketeer: 0.005
+    5. skeletons: 0.004
+
+crop_00167.png:
+  Source: screenshot_0086_IN_BATTLE_png.rf.ba7d5b54b38a7c9f0ad17f97fe5c5251.jpg
+  Predicted: knight (confidence: 0.920)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. knight: 0.920
+    2. furnace: 0.039
+    3. mega_minion: 0.016
+    4. musketeer: 0.007
+    5. goblin_hut: 0.005
+
+crop_00168.png:
+  Source: screenshot_0041_IN_BATTLE_png.rf.4b8fc9fd3212ddc93cf18edf1d53e8fa.jpg
+  Predicted: minions (confidence: 0.273)
+  Reason: low_confidence_0.27
+  Top-5:
+    1. minions: 0.273
+    2. mini_pekka: 0.229
+    3. musketeer: 0.201
+    4. mega_minion: 0.198
+    5. furnace: 0.086
+
+crop_00169.png:
+  Source: screenshot_0041_IN_BATTLE_png.rf.4b8fc9fd3212ddc93cf18edf1d53e8fa.jpg
+  Predicted: mega_minion (confidence: 0.481)
+  Reason: low_confidence_0.48
+  Top-5:
+    1. mega_minion: 0.481
+    2. musketeer: 0.347
+    3. knight: 0.099
+    4. furnace: 0.045
+    5. cannon: 0.009
+
+crop_00170.png:
+  Source: screenshot_0041_IN_BATTLE_png.rf.4b8fc9fd3212ddc93cf18edf1d53e8fa.jpg
+  Predicted: mini_pekka (confidence: 0.410)
+  Reason: low_confidence_0.41
+  Top-5:
+    1. mini_pekka: 0.410
+    2. giant: 0.202
+    3. knight: 0.154
+    4. musketeer: 0.133
+    5. furnace: 0.067
+
+crop_00171.png:
+  Source: screenshot_0041_IN_BATTLE_png.rf.4b8fc9fd3212ddc93cf18edf1d53e8fa.jpg
+  Predicted: skeletons (confidence: 0.701)
+  Reason: low_confidence_0.70
+  Top-5:
+    1. skeletons: 0.701
+    2. bomber: 0.087
+    3. barbarians: 0.042
+    4. mini_pekka: 0.040
+    5. minions: 0.031
+
+crop_00172.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.12daf646b81c2cf327c4e56fd8307a7b.jpg
+  Predicted: goblin_brawler (confidence: 0.837)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. goblin_brawler: 0.837
+    2. giant: 0.096
+    3. barbarians: 0.052
+    4. mini_pekka: 0.008
+    5. valkyrie: 0.002
+
+crop_00173.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.12daf646b81c2cf327c4e56fd8307a7b.jpg
+  Predicted: minions (confidence: 0.830)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. minions: 0.830
+    2. mega_minion: 0.134
+    3. furnace: 0.022
+    4. mini_pekka: 0.005
+    5. goblins: 0.003
+
+crop_00174.png:
+  Source: screenshot_0022_IN_BATTLE_png.rf.12daf646b81c2cf327c4e56fd8307a7b.jpg
+  Predicted: spear_goblins (confidence: 0.609)
+  Reason: low_confidence_0.61
+  Top-5:
+    1. spear_goblins: 0.609
+    2. minions: 0.198
+    3. mini_pekka: 0.092
+    4. archers: 0.031
+    5. knight: 0.026
+
+crop_00175.png:
+  Source: screenshot_0052_IN_BATTLE_png.rf.7408b61282e62a20c7fad480fe63b1c3.jpg
+  Predicted: goblins (confidence: 0.898)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. goblins: 0.898
+    2. spear_goblins: 0.092
+    3. minions: 0.003
+    4. skeletons: 0.001
+    5. barbarians: 0.001
+
+crop_00176.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.f461aeee6d028cd27114410046522fa6.jpg
+  Predicted: spear_goblins (confidence: 0.536)
+  Reason: low_confidence_0.54
+  Top-5:
+    1. spear_goblins: 0.536
+    2. goblin_brawler: 0.375
+    3. goblins: 0.078
+    4. archers: 0.004
+    5. knight: 0.002
+
+crop_00177.png:
+  Source: screenshot_0009_IN_BATTLE_png.rf.ed21fc64d18833bcb16dc243458fc02e.jpg
+  Predicted: goblins (confidence: 0.898)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. goblins: 0.898
+    2. goblin_brawler: 0.028
+    3. archers: 0.016
+    4. spear_goblins: 0.010
+    5. knight: 0.009
+
+crop_00178.png:
+  Source: screenshot_0009_IN_BATTLE_png.rf.ed21fc64d18833bcb16dc243458fc02e.jpg
+  Predicted: archers (confidence: 0.931)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. archers: 0.931
+    2. valkyrie: 0.042
+    3. skeletons: 0.011
+    4. spear_goblins: 0.006
+    5. musketeer: 0.005
+
+crop_00179.png:
+  Source: screenshot_0048_IN_BATTLE_png.rf.e2f46c3030242b2b57b36c3ffb458772.jpg
+  Predicted: spear_goblins (confidence: 0.711)
+  Reason: low_confidence_0.71
+  Top-5:
+    1. spear_goblins: 0.711
+    2. mini_pekka: 0.165
+    3. minions: 0.061
+    4. archers: 0.033
+    5. goblin_brawler: 0.012
+
+crop_00180.png:
+  Source: screenshot_0037_IN_BATTLE_png.rf.5304a6e3cd87e465d4965f907bab9068.jpg
+  Predicted: archers (confidence: 0.829)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. archers: 0.829
+    2. skeletons: 0.088
+    3. musketeer: 0.024
+    4. valkyrie: 0.019
+    5. spear_goblins: 0.017
+
+crop_00181.png:
+  Source: screenshot_0033_IN_BATTLE_png.rf.92d3716edeb5fcefa968f52b0f0d8f66.jpg
+  Predicted: bomber (confidence: 0.603)
+  Reason: low_confidence_0.60
+  Top-5:
+    1. bomber: 0.603
+    2. skeletons: 0.357
+    3. barbarians: 0.023
+    4. fire_spirit: 0.006
+    5. furnace: 0.004
+
+crop_00182.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.b42a8b303b9e6a8ca2f53ac1ccca370b.jpg
+  Predicted: mega_minion (confidence: 0.724)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. mega_minion: 0.724
+    2. furnace: 0.217
+    3. minions: 0.021
+    4. mini_pekka: 0.009
+    5. spear_goblins: 0.006
+
+crop_00183.png:
+  Source: screenshot_0010_IN_BATTLE_png.rf.2598634dbe23290dd45feadab9cf0b21.jpg
+  Predicted: goblins (confidence: 0.573)
+  Reason: low_confidence_0.57
+  Top-5:
+    1. goblins: 0.573
+    2. spear_goblins: 0.418
+    3. barbarians: 0.006
+    4. bomber: 0.001
+    5. archers: 0.001
+
+crop_00184.png:
+  Source: screenshot_0010_IN_BATTLE_png.rf.2598634dbe23290dd45feadab9cf0b21.jpg
+  Predicted: goblins (confidence: 0.583)
+  Reason: low_confidence_0.58
+  Top-5:
+    1. goblins: 0.583
+    2. spear_goblins: 0.399
+    3. skeletons: 0.009
+    4. goblin_brawler: 0.005
+    5. barbarians: 0.001
+
+crop_00185.png:
+  Source: screenshot_0007_IN_BATTLE_png.rf.c80975f4b0b967f4d8f25d6ab7ae85ca.jpg
+  Predicted: furnace (confidence: 0.800)
+  Reason: low_confidence_0.80
+  Top-5:
+    1. furnace: 0.800
+    2. mega_minion: 0.116
+    3. mini_pekka: 0.060
+    4. musketeer: 0.014
+    5. knight: 0.009
+
+crop_00186.png:
+  Source: screenshot_0008_IN_BATTLE_png.rf.61857e8651dd4461f2d56910bc21d741.jpg
+  Predicted: goblin_brawler (confidence: 0.917)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. goblin_brawler: 0.917
+    2. goblins: 0.050
+    3. giant: 0.021
+    4. spear_goblins: 0.002
+    5. furnace: 0.002
+
+crop_00187.png:
+  Source: screenshot_0093_IN_BATTLE_png.rf.639f1396049bdaa81be3e9194d05757f.jpg
+  Predicted: skeletons (confidence: 0.891)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. skeletons: 0.891
+    2. goblins: 0.047
+    3. bomber: 0.041
+    4. minions: 0.008
+    5. archers: 0.006
+
+crop_00188.png:
+  Source: screenshot_0093_IN_BATTLE_png.rf.639f1396049bdaa81be3e9194d05757f.jpg
+  Predicted: skeletons (confidence: 0.852)
+  Reason: low_confidence_0.85
+  Top-5:
+    1. skeletons: 0.852
+    2. minions: 0.065
+    3. archers: 0.025
+    4. musketeer: 0.023
+    5. spear_goblins: 0.016
+
+crop_00189.png:
+  Source: screenshot_0017_IN_BATTLE_png.rf.d3a776b13a6b288e12eceec4708257a7.jpg
+  Predicted: spear_goblins (confidence: 0.769)
+  Reason: low_confidence_0.77
+  Top-5:
+    1. spear_goblins: 0.769
+    2. knight: 0.068
+    3. musketeer: 0.060
+    4. mini_pekka: 0.031
+    5. skeletons: 0.025
+
+crop_00190.png:
+  Source: screenshot_0017_IN_BATTLE_png.rf.d3a776b13a6b288e12eceec4708257a7.jpg
+  Predicted: skeletons (confidence: 0.579)
+  Reason: low_confidence_0.58
+  Top-5:
+    1. skeletons: 0.579
+    2. spear_goblins: 0.190
+    3. mini_pekka: 0.050
+    4. barbarians: 0.046
+    5. musketeer: 0.036
+
+crop_00191.png:
+  Source: screenshot_0082_IN_BATTLE_png.rf.699b737b5c5a3d3dc024990b5551b153.jpg
+  Predicted: musketeer (confidence: 0.922)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. musketeer: 0.922
+    2. mini_pekka: 0.034
+    3. furnace: 0.023
+    4. mega_minion: 0.020
+    5. giant: 0.001
+
+crop_00192.png:
+  Source: screenshot_0082_IN_BATTLE_png.rf.699b737b5c5a3d3dc024990b5551b153.jpg
+  Predicted: goblins (confidence: 0.754)
+  Reason: low_confidence_0.75
+  Top-5:
+    1. goblins: 0.754
+    2. spear_goblins: 0.127
+    3. archers: 0.045
+    4. goblin_brawler: 0.037
+    5. skeletons: 0.030
+
+crop_00193.png:
+  Source: screenshot_0019_IN_BATTLE_png.rf.0599bbf8b6a6ae4f036bd17324cce792.jpg
+  Predicted: skeletons (confidence: 0.935)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. skeletons: 0.935
+    2. goblins: 0.038
+    3. spear_goblins: 0.016
+    4. minions: 0.004
+    5. mini_pekka: 0.002
+
+crop_00194.png:
+  Source: screenshot_0029_IN_BATTLE_png.rf.81e8321b87f6c7ce8ce8bdabf5f528ac.jpg
+  Predicted: furnace (confidence: 0.307)
+  Reason: low_confidence_0.31
+  Top-5:
+    1. furnace: 0.307
+    2. bomber: 0.280
+    3. skeletons: 0.120
+    4. mini_pekka: 0.089
+    5. knight: 0.078
+
+crop_00195.png:
+  Source: screenshot_0036_IN_BATTLE_png.rf.d17f53cd0e379ed0bf93c21d34b16697.jpg
+  Predicted: valkyrie (confidence: 0.827)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. valkyrie: 0.827
+    2. barbarians: 0.071
+    3. mini_pekka: 0.049
+    4. knight: 0.040
+    5. giant: 0.004
+
+crop_00196.png:
+  Source: screenshot_0036_IN_BATTLE_png.rf.d17f53cd0e379ed0bf93c21d34b16697.jpg
+  Predicted: giant (confidence: 0.909)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. giant: 0.909
+    2. furnace: 0.049
+    3. mini_pekka: 0.022
+    4. barbarians: 0.014
+    5. goblin_brawler: 0.001
+
+crop_00197.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.e256d2cac9865755702028fb450a62bc.jpg
+  Predicted: mini_pekka (confidence: 0.562)
+  Reason: low_confidence_0.56
+  Top-5:
+    1. mini_pekka: 0.562
+    2. mega_minion: 0.182
+    3. barbarians: 0.169
+    4. furnace: 0.049
+    5. minions: 0.018
+
+crop_00198.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.e256d2cac9865755702028fb450a62bc.jpg
+  Predicted: minions (confidence: 0.486)
+  Reason: low_confidence_0.49
+  Top-5:
+    1. minions: 0.486
+    2. skeletons: 0.447
+    3. spear_goblins: 0.046
+    4. goblins: 0.009
+    5. furnace: 0.008
+
+crop_00199.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.e256d2cac9865755702028fb450a62bc.jpg
+  Predicted: archers (confidence: 0.396)
+  Reason: low_confidence_0.40
+  Top-5:
+    1. archers: 0.396
+    2. valkyrie: 0.178
+    3. musketeer: 0.145
+    4. skeletons: 0.116
+    5. minions: 0.052
+
+crop_00200.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.e256d2cac9865755702028fb450a62bc.jpg
+  Predicted: skeletons (confidence: 0.354)
+  Reason: low_confidence_0.35
+  Top-5:
+    1. skeletons: 0.354
+    2. spear_goblins: 0.196
+    3. minions: 0.126
+    4. goblins: 0.072
+    5. bomber: 0.059
+
+crop_00201.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.e256d2cac9865755702028fb450a62bc.jpg
+  Predicted: skeletons (confidence: 0.422)
+  Reason: low_confidence_0.42
+  Top-5:
+    1. skeletons: 0.422
+    2. barbarians: 0.254
+    3. mini_pekka: 0.096
+    4. spear_goblins: 0.085
+    5. bomber: 0.057
+
+crop_00202.png:
+  Source: screenshot_0023_IN_BATTLE_png.rf.e256d2cac9865755702028fb450a62bc.jpg
+  Predicted: skeletons (confidence: 0.868)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. skeletons: 0.868
+    2. minions: 0.063
+    3. musketeer: 0.058
+    4. tombstone: 0.003
+    5. bomber: 0.002
+
+crop_00203.png:
+  Source: screenshot_0033_IN_BATTLE_png.rf.cecec2249ac7b9c7706f48c96081b301.jpg
+  Predicted: spear_goblins (confidence: 0.839)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. spear_goblins: 0.839
+    2. goblins: 0.103
+    3. skeletons: 0.024
+    4. barbarians: 0.015
+    5. goblin_brawler: 0.005
+
+crop_00204.png:
+  Source: screenshot_0033_IN_BATTLE_png.rf.cecec2249ac7b9c7706f48c96081b301.jpg
+  Predicted: skeletons (confidence: 0.286)
+  Reason: low_confidence_0.29
+  Top-5:
+    1. skeletons: 0.286
+    2. spear_goblins: 0.281
+    3. minions: 0.146
+    4. archers: 0.126
+    5. barbarians: 0.041
+
+crop_00205.png:
+  Source: screenshot_0033_IN_BATTLE_png.rf.91af16634004656d963de1d724e4b151.jpg
+  Predicted: giant (confidence: 0.929)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. giant: 0.929
+    2. knight: 0.029
+    3. barbarians: 0.024
+    4. goblins: 0.003
+    5. mini_pekka: 0.003
+
+crop_00206.png:
+  Source: screenshot_0090_IN_BATTLE_png.rf.04f7cefd8ea96623076356c65f4754c0.jpg
+  Predicted: spear_goblins (confidence: 0.919)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. spear_goblins: 0.919
+    2. goblins: 0.077
+    3. archers: 0.001
+    4. goblin_brawler: 0.001
+    5. skeletons: 0.001
+
+crop_00207.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.73be32aecfe61f9fabc7caab30bff1ef.jpg
+  Predicted: spear_goblins (confidence: 0.889)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. spear_goblins: 0.889
+    2. goblins: 0.086
+    3. minions: 0.006
+    4. archers: 0.005
+    5. goblin_brawler: 0.004
+
+crop_00208.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.73be32aecfe61f9fabc7caab30bff1ef.jpg
+  Predicted: spear_goblins (confidence: 0.764)
+  Reason: low_confidence_0.76
+  Top-5:
+    1. spear_goblins: 0.764
+    2. goblins: 0.195
+    3. goblin_brawler: 0.013
+    4. archers: 0.009
+    5. knight: 0.006
+
+crop_00209.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.73be32aecfe61f9fabc7caab30bff1ef.jpg
+  Predicted: archers (confidence: 0.915)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. archers: 0.915
+    2. goblins: 0.069
+    3. musketeer: 0.007
+    4. minions: 0.004
+    5. spear_goblins: 0.002
+
+crop_00210.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.73be32aecfe61f9fabc7caab30bff1ef.jpg
+  Predicted: archers (confidence: 0.816)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. archers: 0.816
+    2. musketeer: 0.107
+    3. bomber: 0.024
+    4. skeletons: 0.016
+    5. goblins: 0.014
+
+crop_00211.png:
+  Source: screenshot_0092_IN_BATTLE_png.rf.6bed5d301c296fb82c635cc2256e4804.jpg
+  Predicted: spear_goblins (confidence: 0.897)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. spear_goblins: 0.897
+    2. bomber: 0.087
+    3. goblins: 0.004
+    4. skeletons: 0.003
+    5. mini_pekka: 0.002
+
+crop_00212.png:
+  Source: screenshot_0092_IN_BATTLE_png.rf.6bed5d301c296fb82c635cc2256e4804.jpg
+  Predicted: goblins (confidence: 0.449)
+  Reason: low_confidence_0.45
+  Top-5:
+    1. goblins: 0.449
+    2. archers: 0.325
+    3. spear_goblins: 0.107
+    4. knight: 0.054
+    5. goblin_brawler: 0.018
+
+crop_00213.png:
+  Source: screenshot_0043_IN_BATTLE_png.rf.4eba2bfe8e3e3698288aac28c63610a0.jpg
+  Predicted: goblin_brawler (confidence: 0.901)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. goblin_brawler: 0.901
+    2. giant: 0.081
+    3. barbarians: 0.007
+    4. goblins: 0.005
+    5. mini_pekka: 0.004
+
+crop_00214.png:
+  Source: screenshot_0043_IN_BATTLE_png.rf.4eba2bfe8e3e3698288aac28c63610a0.jpg
+  Predicted: bomber (confidence: 0.639)
+  Reason: low_confidence_0.64
+  Top-5:
+    1. bomber: 0.639
+    2. mini_pekka: 0.333
+    3. minions: 0.012
+    4. musketeer: 0.008
+    5. archers: 0.002
+
+crop_00215.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.b45abff1cb8df8d01c0fcee1f3da0bec.jpg
+  Predicted: barbarians (confidence: 0.431)
+  Reason: low_confidence_0.43
+  Top-5:
+    1. barbarians: 0.431
+    2. valkyrie: 0.362
+    3. knight: 0.110
+    4. mini_pekka: 0.072
+    5. minions: 0.007
+
+crop_00216.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.b45abff1cb8df8d01c0fcee1f3da0bec.jpg
+  Predicted: valkyrie (confidence: 0.883)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. valkyrie: 0.883
+    2. fire_spirit: 0.075
+    3. mini_pekka: 0.013
+    4. bomber: 0.007
+    5. minions: 0.007
+
+crop_00217.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.b45abff1cb8df8d01c0fcee1f3da0bec.jpg
+  Predicted: musketeer (confidence: 0.681)
+  Reason: low_confidence_0.68
+  Top-5:
+    1. musketeer: 0.681
+    2. bomber: 0.315
+    3. mini_pekka: 0.003
+    4. minions: 0.000
+    5. archers: 0.000
+
+crop_00218.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.b45abff1cb8df8d01c0fcee1f3da0bec.jpg
+  Predicted: spear_goblins (confidence: 0.925)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. spear_goblins: 0.925
+    2. goblins: 0.020
+    3. goblin_brawler: 0.019
+    4. knight: 0.013
+    5. archers: 0.005
+
+crop_00219.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.b45abff1cb8df8d01c0fcee1f3da0bec.jpg
+  Predicted: spear_goblins (confidence: 0.842)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. spear_goblins: 0.842
+    2. goblins: 0.099
+    3. goblin_brawler: 0.019
+    4. minions: 0.010
+    5. knight: 0.010
+
+crop_00220.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.244b9225352b2a346c08f0213f8f3331.jpg
+  Predicted: spear_goblins (confidence: 0.543)
+  Reason: low_confidence_0.54
+  Top-5:
+    1. spear_goblins: 0.543
+    2. goblins: 0.355
+    3. goblin_brawler: 0.076
+    4. knight: 0.009
+    5. archers: 0.007
+
+crop_00221.png:
+  Source: screenshot_0032_IN_BATTLE_png.rf.244b9225352b2a346c08f0213f8f3331.jpg
+  Predicted: spear_goblins (confidence: 0.928)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. spear_goblins: 0.928
+    2. goblins: 0.064
+    3. goblin_brawler: 0.001
+    4. skeletons: 0.001
+    5. musketeer: 0.001
+
+crop_00222.png:
+  Source: screenshot_0105_IN_BATTLE_png.rf.1cd0e4fcf0bc164bee1f162e325630a0.jpg
+  Predicted: musketeer (confidence: 0.933)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. musketeer: 0.933
+    2. bomber: 0.052
+    3. giant: 0.008
+    4. archers: 0.003
+    5. mini_pekka: 0.003
+
+crop_00223.png:
+  Source: screenshot_0105_IN_BATTLE_png.rf.1cd0e4fcf0bc164bee1f162e325630a0.jpg
+  Predicted: goblins (confidence: 0.946)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. goblins: 0.946
+    2. minions: 0.028
+    3. spear_goblins: 0.020
+    4. skeletons: 0.003
+    5. archers: 0.001
+
+crop_00224.png:
+  Source: screenshot_0025_IN_BATTLE_png.rf.e675241753abf2a73294ca7f9a8c6fc2.jpg
+  Predicted: furnace (confidence: 0.485)
+  Reason: low_confidence_0.49
+  Top-5:
+    1. furnace: 0.485
+    2. knight: 0.149
+    3. battle_ram: 0.096
+    4. mini_pekka: 0.090
+    5. giant: 0.071
+
+crop_00225.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.200bf0f2b38ce72ab15d814431e27e23.jpg
+  Predicted: goblins (confidence: 0.575)
+  Reason: low_confidence_0.57
+  Top-5:
+    1. goblins: 0.575
+    2. spear_goblins: 0.394
+    3. goblin_brawler: 0.016
+    4. barbarians: 0.005
+    5. mini_pekka: 0.003
+
+crop_00226.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.200bf0f2b38ce72ab15d814431e27e23.jpg
+  Predicted: spear_goblins (confidence: 0.673)
+  Reason: low_confidence_0.67
+  Top-5:
+    1. spear_goblins: 0.673
+    2. skeletons: 0.211
+    3. valkyrie: 0.047
+    4. mini_pekka: 0.021
+    5. archers: 0.014
+
+crop_00227.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.5376a0c9d76b61f885f5c772a096d346.jpg
+  Predicted: goblin_hut (confidence: 0.926)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. goblin_hut: 0.926
+    2. giant: 0.015
+    3. barbarians: 0.011
+    4. archers: 0.008
+    5. knight: 0.008
+
+crop_00228.png:
+  Source: screenshot_0040_IN_BATTLE_png.rf.5376a0c9d76b61f885f5c772a096d346.jpg
+  Predicted: spear_goblins (confidence: 0.939)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. spear_goblins: 0.939
+    2. archers: 0.018
+    3. goblins: 0.018
+    4. skeletons: 0.008
+    5. goblin_brawler: 0.004
+
+crop_00229.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.17ab515441e29b735d6937d9d531ed6b.jpg
+  Predicted: bomber (confidence: 0.278)
+  Reason: low_confidence_0.28
+  Top-5:
+    1. bomber: 0.278
+    2. spear_goblins: 0.235
+    3. mini_pekka: 0.148
+    4. goblins: 0.105
+    5. minions: 0.105
+
+crop_00230.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.81cd0763ced8b0c536e3670e78f6b394.jpg
+  Predicted: skeletons (confidence: 0.344)
+  Reason: low_confidence_0.34
+  Top-5:
+    1. skeletons: 0.344
+    2. minions: 0.115
+    3. bomber: 0.102
+    4. archers: 0.086
+    5. mini_pekka: 0.075
+
+crop_00231.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.81cd0763ced8b0c536e3670e78f6b394.jpg
+  Predicted: archers (confidence: 0.735)
+  Reason: low_confidence_0.73
+  Top-5:
+    1. archers: 0.735
+    2. barbarians: 0.093
+    3. bomber: 0.078
+    4. spear_goblins: 0.054
+    5. minions: 0.022
+
+crop_00232.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.81cd0763ced8b0c536e3670e78f6b394.jpg
+  Predicted: skeletons (confidence: 0.941)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. skeletons: 0.941
+    2. mini_pekka: 0.020
+    3. minions: 0.010
+    4. bomber: 0.007
+    5. furnace: 0.005
+
+crop_00233.png:
+  Source: screenshot_0045_IN_BATTLE_png.rf.e38330199bbe9b536ad72394bc44c0e2.jpg
+  Predicted: minions (confidence: 0.263)
+  Reason: low_confidence_0.26
+  Top-5:
+    1. minions: 0.263
+    2. barbarians: 0.240
+    3. mini_pekka: 0.208
+    4. knight: 0.084
+    5. goblins: 0.044
+
+crop_00234.png:
+  Source: screenshot_0052_IN_BATTLE_png.rf.ff5035e00353729564fae04dd4b1d02b.jpg
+  Predicted: barbarians (confidence: 0.272)
+  Reason: low_confidence_0.27
+  Top-5:
+    1. barbarians: 0.272
+    2. minions: 0.209
+    3. valkyrie: 0.185
+    4. mini_pekka: 0.143
+    5. archers: 0.088
+
+crop_00235.png:
+  Source: screenshot_0052_IN_BATTLE_png.rf.ff5035e00353729564fae04dd4b1d02b.jpg
+  Predicted: spear_goblins (confidence: 0.760)
+  Reason: low_confidence_0.76
+  Top-5:
+    1. spear_goblins: 0.760
+    2. goblin_brawler: 0.040
+    3. goblins: 0.039
+    4. furnace: 0.030
+    5. knight: 0.023
+
+crop_00236.png:
+  Source: screenshot_0052_IN_BATTLE_png.rf.ff5035e00353729564fae04dd4b1d02b.jpg
+  Predicted: goblin_cage (confidence: 0.715)
+  Reason: low_confidence_0.71
+  Top-5:
+    1. goblin_cage: 0.715
+    2. valkyrie: 0.124
+    3. minions: 0.047
+    4. battle_ram: 0.026
+    5. mini_pekka: 0.026
+
+crop_00237.png:
+  Source: screenshot_0052_IN_BATTLE_png.rf.ff5035e00353729564fae04dd4b1d02b.jpg
+  Predicted: skeletons (confidence: 0.944)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. skeletons: 0.944
+    2. mini_pekka: 0.012
+    3. fire_spirit: 0.011
+    4. barbarians: 0.004
+    5. giant: 0.003
+
+crop_00238.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.874e09d91ae92bbf06a6e443465bdc83.jpg
+  Predicted: goblin_hut (confidence: 0.644)
+  Reason: low_confidence_0.64
+  Top-5:
+    1. goblin_hut: 0.644
+    2. battle_ram: 0.166
+    3. giant: 0.089
+    4. goblin_cage: 0.035
+    5. mini_pekka: 0.023
+
+crop_00239.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.874e09d91ae92bbf06a6e443465bdc83.jpg
+  Predicted: goblin_hut (confidence: 0.310)
+  Reason: low_confidence_0.31
+  Top-5:
+    1. goblin_hut: 0.310
+    2. goblins: 0.300
+    3. giant: 0.248
+    4. battle_ram: 0.074
+    5. mini_pekka: 0.021
+
+crop_00240.png:
+  Source: screenshot_0031_IN_BATTLE_png.rf.874e09d91ae92bbf06a6e443465bdc83.jpg
+  Predicted: goblin_hut (confidence: 0.904)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. goblin_hut: 0.904
+    2. goblins: 0.049
+    3. battle_ram: 0.026
+    4. giant: 0.006
+    5. barbarians: 0.003
+
+crop_00241.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.6599874d868d599a6669ffc460ede28c.jpg
+  Predicted: mega_minion (confidence: 0.470)
+  Reason: low_confidence_0.47
+  Top-5:
+    1. mega_minion: 0.470
+    2. furnace: 0.401
+    3. knight: 0.094
+    4. mini_pekka: 0.009
+    5. minions: 0.004
+
+crop_00242.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.6599874d868d599a6669ffc460ede28c.jpg
+  Predicted: barbarians (confidence: 0.913)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. barbarians: 0.913
+    2. mini_pekka: 0.070
+    3. valkyrie: 0.011
+    4. goblin_brawler: 0.004
+    5. giant: 0.001
+
+crop_00243.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.6599874d868d599a6669ffc460ede28c.jpg
+  Predicted: barbarians (confidence: 0.897)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. barbarians: 0.897
+    2. furnace: 0.070
+    3. spear_goblins: 0.010
+    4. mini_pekka: 0.010
+    5. knight: 0.004
+
+crop_00244.png:
+  Source: screenshot_0015_IN_BATTLE_png.rf.bfb28ccf317429825b378dee3b5b6019.jpg
+  Predicted: barbarians (confidence: 0.888)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. barbarians: 0.888
+    2. valkyrie: 0.052
+    3. knight: 0.027
+    4. goblin_brawler: 0.010
+    5. mini_pekka: 0.008
+
+crop_00245.png:
+  Source: screenshot_0011_IN_BATTLE_png.rf.313c00dfd0bccd41eeab0bc6f9c17002.jpg
+  Predicted: cannon (confidence: 0.549)
+  Reason: low_confidence_0.55
+  Top-5:
+    1. cannon: 0.549
+    2. bomber: 0.432
+    3. mini_pekka: 0.006
+    4. furnace: 0.005
+    5. knight: 0.004
+
+crop_00246.png:
+  Source: screenshot_0056_IN_BATTLE_png.rf.8ad560cb95bc6d5853243bf441b61299.jpg
+  Predicted: goblins (confidence: 0.940)
+  Reason: low_confidence_0.94
+  Top-5:
+    1. goblins: 0.940
+    2. spear_goblins: 0.034
+    3. goblin_brawler: 0.012
+    4. mini_pekka: 0.002
+    5. barbarians: 0.002
+
+crop_00247.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.dc0c105d0db7f4d504e50fdd977ccfd4.jpg
+  Predicted: spear_goblins (confidence: 0.911)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. spear_goblins: 0.911
+    2. barbarians: 0.078
+    3. goblins: 0.005
+    4. skeletons: 0.002
+    5. goblin_brawler: 0.002
+
+crop_00248.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.dc0c105d0db7f4d504e50fdd977ccfd4.jpg
+  Predicted: barbarians (confidence: 0.881)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. barbarians: 0.881
+    2. mini_pekka: 0.093
+    3. knight: 0.017
+    4. bomber: 0.003
+    5. spear_goblins: 0.001
+
+crop_00249.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.dc0c105d0db7f4d504e50fdd977ccfd4.jpg
+  Predicted: musketeer (confidence: 0.843)
+  Reason: low_confidence_0.84
+  Top-5:
+    1. musketeer: 0.843
+    2. skeletons: 0.063
+    3. furnace: 0.054
+    4. mega_minion: 0.020
+    5. cannon: 0.004
+
+crop_00250.png:
+  Source: screenshot_0009_IN_BATTLE_png.rf.6e54681110d99eb9a356fc2844738c76.jpg
+  Predicted: giant (confidence: 0.753)
+  Reason: low_confidence_0.75
+  Top-5:
+    1. giant: 0.753
+    2. barbarians: 0.157
+    3. goblins: 0.040
+    4. goblin_brawler: 0.030
+    5. mini_pekka: 0.011
+
+crop_00251.png:
+  Source: screenshot_0009_IN_BATTLE_png.rf.6e54681110d99eb9a356fc2844738c76.jpg
+  Predicted: archers (confidence: 0.429)
+  Reason: low_confidence_0.43
+  Top-5:
+    1. archers: 0.429
+    2. goblins: 0.284
+    3. minions: 0.159
+    4. musketeer: 0.071
+    5. spear_goblins: 0.018
+
+crop_00252.png:
+  Source: screenshot_0019_IN_BATTLE_png.rf.8db40eb150637b2bbdeceabced4651eb.jpg
+  Predicted: spear_goblins (confidence: 0.627)
+  Reason: low_confidence_0.63
+  Top-5:
+    1. spear_goblins: 0.627
+    2. goblins: 0.216
+    3. goblin_brawler: 0.130
+    4. barbarians: 0.022
+    5. mini_pekka: 0.001
+
+crop_00253.png:
+  Source: screenshot_0019_IN_BATTLE_png.rf.8db40eb150637b2bbdeceabced4651eb.jpg
+  Predicted: spear_goblins (confidence: 0.604)
+  Reason: low_confidence_0.60
+  Top-5:
+    1. spear_goblins: 0.604
+    2. goblins: 0.382
+    3. goblin_brawler: 0.012
+    4. barbarians: 0.001
+    5. archers: 0.000
+
+crop_00254.png:
+  Source: screenshot_0005_IN_BATTLE_png.rf.a33183475e9f7b95562c2919e174607c.jpg
+  Predicted: bomber (confidence: 0.638)
+  Reason: low_confidence_0.64
+  Top-5:
+    1. bomber: 0.638
+    2. cannon: 0.359
+    3. mini_pekka: 0.001
+    4. furnace: 0.000
+    5. musketeer: 0.000
+
+crop_00255.png:
+  Source: screenshot_0107_IN_BATTLE_png.rf.08d74da3eee00552320ddcf0b5a3646f.jpg
+  Predicted: spear_goblins (confidence: 0.383)
+  Reason: low_confidence_0.38
+  Top-5:
+    1. spear_goblins: 0.383
+    2. mini_pekka: 0.356
+    3. goblin_hut: 0.074
+    4. knight: 0.068
+    5. goblin_brawler: 0.063
+
+crop_00256.png:
+  Source: screenshot_0094_IN_BATTLE_png.rf.445cbfba2669b897358b4512958a02d5.jpg
+  Predicted: spear_goblins (confidence: 0.878)
+  Reason: low_confidence_0.88
+  Top-5:
+    1. spear_goblins: 0.878
+    2. goblins: 0.049
+    3. goblin_brawler: 0.032
+    4. valkyrie: 0.014
+    5. archers: 0.010
+
+crop_00257.png:
+  Source: screenshot_0082_IN_BATTLE_png.rf.2acdb3b30b794db9fd0abc1aa0bd7292.jpg
+  Predicted: skeletons (confidence: 0.521)
+  Reason: low_confidence_0.52
+  Top-5:
+    1. skeletons: 0.521
+    2. spear_goblins: 0.170
+    3. fire_spirit: 0.160
+    4. barbarians: 0.053
+    5. archers: 0.035
+
+crop_00258.png:
+  Source: screenshot_0005_IN_BATTLE_png.rf.a2a44d9b1fd13f5a711116ebb7bfd7b2.jpg
+  Predicted: mini_pekka (confidence: 0.602)
+  Reason: low_confidence_0.60
+  Top-5:
+    1. mini_pekka: 0.602
+    2. furnace: 0.246
+    3. barbarians: 0.099
+    4. spear_goblins: 0.011
+    5. goblin_hut: 0.010
+
+crop_00259.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.4fd8a15a909cdb0b6ad1fc55401801b5.jpg
+  Predicted: goblins (confidence: 0.753)
+  Reason: low_confidence_0.75
+  Top-5:
+    1. goblins: 0.753
+    2. archers: 0.167
+    3. minions: 0.031
+    4. spear_goblins: 0.030
+    5. musketeer: 0.005
+
+crop_00260.png:
+  Source: screenshot_0016_IN_BATTLE_png.rf.4fd8a15a909cdb0b6ad1fc55401801b5.jpg
+  Predicted: goblins (confidence: 0.871)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. goblins: 0.871
+    2. spear_goblins: 0.122
+    3. skeletons: 0.002
+    4. goblin_brawler: 0.002
+    5. archers: 0.001
+
+crop_00261.png:
+  Source: screenshot_0044_IN_BATTLE_png.rf.75958e32e00462d9c7e94ca7a3f0168e.jpg
+  Predicted: goblin_cage (confidence: 0.890)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. goblin_cage: 0.890
+    2. battle_ram: 0.097
+    3. valkyrie: 0.003
+    4. goblin_hut: 0.002
+    5. barbarians: 0.002
+
+crop_00262.png:
+  Source: screenshot_0044_IN_BATTLE_png.rf.75958e32e00462d9c7e94ca7a3f0168e.jpg
+  Predicted: furnace (confidence: 0.550)
+  Reason: low_confidence_0.55
+  Top-5:
+    1. furnace: 0.550
+    2. battle_ram: 0.186
+    3. giant: 0.125
+    4. bomber: 0.057
+    5. barbarians: 0.052
+
+crop_00263.png:
+  Source: screenshot_0017_IN_BATTLE_png.rf.42556e6fe7b2a1ce41f0433283abc522.jpg
+  Predicted: barbarians (confidence: 0.888)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. barbarians: 0.888
+    2. minions: 0.038
+    3. mini_pekka: 0.030
+    4. valkyrie: 0.013
+    5. spear_goblins: 0.008
+
+crop_00264.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.7e1e709811d941ecc910a6238071142a.jpg
+  Predicted: spear_goblins (confidence: 0.835)
+  Reason: low_confidence_0.83
+  Top-5:
+    1. spear_goblins: 0.835
+    2. goblins: 0.153
+    3. goblin_brawler: 0.006
+    4. archers: 0.002
+    5. minions: 0.001
+
+crop_00265.png:
+  Source: screenshot_0012_IN_BATTLE_png.rf.d4fc413eef76f1a97b3158e18851119a.jpg
+  Predicted: spear_goblins (confidence: 0.785)
+  Reason: low_confidence_0.78
+  Top-5:
+    1. spear_goblins: 0.785
+    2. goblin_brawler: 0.155
+    3. barbarians: 0.057
+    4. mini_pekka: 0.002
+    5. goblins: 0.001
+
+crop_00266.png:
+  Source: screenshot_0012_IN_BATTLE_png.rf.d4fc413eef76f1a97b3158e18851119a.jpg
+  Predicted: bomber (confidence: 0.875)
+  Reason: low_confidence_0.87
+  Top-5:
+    1. bomber: 0.875
+    2. mini_pekka: 0.110
+    3. giant: 0.003
+    4. skeletons: 0.002
+    5. musketeer: 0.002
+
+crop_00267.png:
+  Source: screenshot_0049_IN_BATTLE_png.rf.f20896f820fc79ae0d2fc191f3764686.jpg
+  Predicted: barbarians (confidence: 0.529)
+  Reason: low_confidence_0.53
+  Top-5:
+    1. barbarians: 0.529
+    2. mini_pekka: 0.451
+    3. valkyrie: 0.010
+    4. goblin_brawler: 0.003
+    5. spear_goblins: 0.002
+
+crop_00268.png:
+  Source: screenshot_0049_IN_BATTLE_png.rf.f20896f820fc79ae0d2fc191f3764686.jpg
+  Predicted: knight (confidence: 0.916)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. knight: 0.916
+    2. goblin_hut: 0.054
+    3. barbarians: 0.007
+    4. furnace: 0.006
+    5. mini_pekka: 0.005
+
+crop_00269.png:
+  Source: screenshot_0012_IN_BATTLE_png.rf.d608551b6a1ac256ab792d8aa9001a95.jpg
+  Predicted: mini_pekka (confidence: 0.769)
+  Reason: low_confidence_0.77
+  Top-5:
+    1. mini_pekka: 0.769
+    2. musketeer: 0.064
+    3. bomber: 0.061
+    4. furnace: 0.029
+    5. knight: 0.021
+
+crop_00270.png:
+  Source: screenshot_0048_IN_BATTLE_png.rf.61713dbf9d58d47706dde4355e7ec70d.jpg
+  Predicted: mini_pekka (confidence: 0.815)
+  Reason: low_confidence_0.81
+  Top-5:
+    1. mini_pekka: 0.815
+    2. musketeer: 0.073
+    3. minions: 0.027
+    4. archers: 0.022
+    5. furnace: 0.017
+
+crop_00271.png:
+  Source: screenshot_0048_IN_BATTLE_png.rf.61713dbf9d58d47706dde4355e7ec70d.jpg
+  Predicted: barbarians (confidence: 0.825)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. barbarians: 0.825
+    2. mini_pekka: 0.085
+    3. goblins: 0.056
+    4. knight: 0.012
+    5. goblin_brawler: 0.008
+
+crop_00272.png:
+  Source: screenshot_0028_IN_BATTLE_png.rf.b3f124267603afe119fb6c26a02688b7.jpg
+  Predicted: spear_goblins (confidence: 0.614)
+  Reason: low_confidence_0.61
+  Top-5:
+    1. spear_goblins: 0.614
+    2. goblins: 0.259
+    3. archers: 0.046
+    4. bomber: 0.038
+    5. skeletons: 0.022
+
+crop_00273.png:
+  Source: screenshot_0013_IN_BATTLE_png.rf.399e545eade89a4f4fdbb92615238697.jpg
+  Predicted: archers (confidence: 0.370)
+  Reason: low_confidence_0.37
+  Top-5:
+    1. archers: 0.370
+    2. spear_goblins: 0.282
+    3. skeletons: 0.094
+    4. musketeer: 0.058
+    5. goblins: 0.049
+
+crop_00274.png:
+  Source: screenshot_0066_IN_BATTLE_png.rf.78b65163eeb1ec49724f21a2eaed7d79.jpg
+  Predicted: giant (confidence: 0.853)
+  Reason: low_confidence_0.85
+  Top-5:
+    1. giant: 0.853
+    2. furnace: 0.047
+    3. knight: 0.028
+    4. mini_pekka: 0.024
+    5. goblin_cage: 0.013
+
+crop_00275.png:
+  Source: screenshot_0066_IN_BATTLE_png.rf.78b65163eeb1ec49724f21a2eaed7d79.jpg
+  Predicted: archers (confidence: 0.902)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. archers: 0.902
+    2. mini_pekka: 0.052
+    3. minions: 0.019
+    4. valkyrie: 0.019
+    5. knight: 0.005
+
+crop_00276.png:
+  Source: screenshot_0049_IN_BATTLE_png.rf.4a6872e50a30b8455874a5a1e690d6ea.jpg
+  Predicted: spear_goblins (confidence: 0.287)
+  Reason: low_confidence_0.29
+  Top-5:
+    1. spear_goblins: 0.287
+    2. barbarians: 0.214
+    3. goblins: 0.197
+    4. skeletons: 0.178
+    5. knight: 0.038
+
+crop_00277.png:
+  Source: screenshot_0043_IN_BATTLE_png.rf.214500bd5d36bfa0d528fa85fd61d3fa.jpg
+  Predicted: goblins (confidence: 0.917)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. goblins: 0.917
+    2. spear_goblins: 0.082
+    3. goblin_brawler: 0.000
+    4. minions: 0.000
+    5. knight: 0.000
+
+crop_00278.png:
+  Source: screenshot_0043_IN_BATTLE_png.rf.214500bd5d36bfa0d528fa85fd61d3fa.jpg
+  Predicted: skeletons (confidence: 0.557)
+  Reason: low_confidence_0.56
+  Top-5:
+    1. skeletons: 0.557
+    2. minions: 0.244
+    3. goblins: 0.103
+    4. archers: 0.037
+    5. bomber: 0.026
+
+crop_00279.png:
+  Source: screenshot_0050_IN_BATTLE_png.rf.98f850bac0c385bb0895136b9f34a349.jpg
+  Predicted: mini_pekka (confidence: 0.948)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. mini_pekka: 0.948
+    2. cannon: 0.029
+    3. battle_ram: 0.012
+    4. bomber: 0.008
+    5. musketeer: 0.001
+
+crop_00280.png:
+  Source: screenshot_0086_IN_BATTLE_png.rf.d9683df3db8dc1c61a23beac15bba413.jpg
+  Predicted: knight (confidence: 0.895)
+  Reason: low_confidence_0.89
+  Top-5:
+    1. knight: 0.895
+    2. valkyrie: 0.052
+    3. furnace: 0.030
+    4. musketeer: 0.008
+    5. mini_pekka: 0.006
+
+crop_00281.png:
+  Source: screenshot_0018_IN_BATTLE_png.rf.44ffaf92e60a7555cc4720b65595bb0a.jpg
+  Predicted: bomber (confidence: 0.630)
+  Reason: low_confidence_0.63
+  Top-5:
+    1. bomber: 0.630
+    2. skeletons: 0.122
+    3. valkyrie: 0.104
+    4. archers: 0.046
+    5. mini_pekka: 0.027
+
+crop_00282.png:
+  Source: screenshot_0004_IN_BATTLE_png.rf.f3f6d5027ca52949cbdeb1e8cb5243e7.jpg
+  Predicted: knight (confidence: 0.237)
+  Reason: low_confidence_0.24
+  Top-5:
+    1. knight: 0.237
+    2. bomber: 0.181
+    3. mini_pekka: 0.148
+    4. skeletons: 0.095
+    5. furnace: 0.092
+
+crop_00283.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.833901d64675c4dace153d3d87e78bd1.jpg
+  Predicted: spear_goblins (confidence: 0.586)
+  Reason: low_confidence_0.59
+  Top-5:
+    1. spear_goblins: 0.586
+    2. goblins: 0.403
+    3. goblin_brawler: 0.006
+    4. archers: 0.002
+    5. barbarians: 0.001
+
+crop_00284.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.833901d64675c4dace153d3d87e78bd1.jpg
+  Predicted: goblins (confidence: 0.917)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. goblins: 0.917
+    2. barbarians: 0.074
+    3. mini_pekka: 0.002
+    4. fire_spirit: 0.002
+    5. goblin_brawler: 0.002
+
+crop_00285.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.833901d64675c4dace153d3d87e78bd1.jpg
+  Predicted: goblins (confidence: 0.391)
+  Reason: low_confidence_0.39
+  Top-5:
+    1. goblins: 0.391
+    2. minions: 0.384
+    3. skeletons: 0.209
+    4. musketeer: 0.006
+    5. archers: 0.005
+
+crop_00286.png:
+  Source: screenshot_0084_IN_BATTLE_png.rf.833901d64675c4dace153d3d87e78bd1.jpg
+  Predicted: skeletons (confidence: 0.771)
+  Reason: low_confidence_0.77
+  Top-5:
+    1. skeletons: 0.771
+    2. goblins: 0.136
+    3. minions: 0.080
+    4. musketeer: 0.005
+    5. spear_goblins: 0.005
+
+crop_00287.png:
+  Source: screenshot_0045_IN_BATTLE_png.rf.54c2d743440654896b98cefc3dd21f18.jpg
+  Predicted: mini_pekka (confidence: 0.648)
+  Reason: low_confidence_0.65
+  Top-5:
+    1. mini_pekka: 0.648
+    2. minions: 0.323
+    3. barbarians: 0.005
+    4. bomber: 0.005
+    5. musketeer: 0.005
+
+crop_00288.png:
+  Source: screenshot_0080_IN_BATTLE_png.rf.8b3803cd091bf4e3c4d624fe3a808347.jpg
+  Predicted: skeletons (confidence: 0.899)
+  Reason: low_confidence_0.90
+  Top-5:
+    1. skeletons: 0.899
+    2. bomber: 0.069
+    3. mini_pekka: 0.026
+    4. minions: 0.003
+    5. goblins: 0.001
+
+crop_00289.png:
+  Source: screenshot_0041_IN_BATTLE_png.rf.b24af2a20f196abcb5fa91b0cd322175.jpg
+  Predicted: skeletons (confidence: 0.916)
+  Reason: low_confidence_0.92
+  Top-5:
+    1. skeletons: 0.916
+    2. spear_goblins: 0.060
+    3. minions: 0.010
+    4. goblins: 0.007
+    5. archers: 0.002
+
+crop_00290.png:
+  Source: screenshot_0041_IN_BATTLE_png.rf.b24af2a20f196abcb5fa91b0cd322175.jpg
+  Predicted: minions (confidence: 0.816)
+  Reason: low_confidence_0.82
+  Top-5:
+    1. minions: 0.816
+    2. bomber: 0.065
+    3. musketeer: 0.031
+    4. skeletons: 0.029
+    5. goblins: 0.028
+
+crop_00291.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.c567144e26a366fd6cdf52d02b838bbf.jpg
+  Predicted: furnace (confidence: 0.392)
+  Reason: low_confidence_0.39
+  Top-5:
+    1. furnace: 0.392
+    2. knight: 0.138
+    3. barbarians: 0.129
+    4. spear_goblins: 0.077
+    5. goblin_hut: 0.073
+
+crop_00292.png:
+  Source: screenshot_0014_IN_BATTLE_png.rf.c567144e26a366fd6cdf52d02b838bbf.jpg
+  Predicted: barbarians (confidence: 0.947)
+  Reason: low_confidence_0.95
+  Top-5:
+    1. barbarians: 0.947
+    2. goblins: 0.018
+    3. mini_pekka: 0.013
+    4. archers: 0.010
+    5. musketeer: 0.004
+
+crop_00293.png:
+  Source: screenshot_0056_IN_BATTLE_png.rf.6122f88db6dabef7b884603eb5e51a37.jpg
+  Predicted: musketeer (confidence: 0.905)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. musketeer: 0.905
+    2. archers: 0.054
+    3. bomber: 0.012
+    4. valkyrie: 0.008
+    5. goblins: 0.005
+
+crop_00294.png:
+  Source: screenshot_0096_IN_BATTLE_png.rf.1093df18403f7c59cb092998a3f33aab.jpg
+  Predicted: spear_goblins (confidence: 0.737)
+  Reason: low_confidence_0.74
+  Top-5:
+    1. spear_goblins: 0.737
+    2. goblins: 0.200
+    3. archers: 0.032
+    4. goblin_brawler: 0.019
+    5. barbarians: 0.005
+
+crop_00295.png:
+  Source: screenshot_0096_IN_BATTLE_png.rf.1093df18403f7c59cb092998a3f33aab.jpg
+  Predicted: valkyrie (confidence: 0.721)
+  Reason: low_confidence_0.72
+  Top-5:
+    1. valkyrie: 0.721
+    2. skeletons: 0.129
+    3. minions: 0.051
+    4. archers: 0.043
+    5. spear_goblins: 0.027
+
+crop_00296.png:
+  Source: screenshot_0053_IN_BATTLE_png.rf.4dcd6ccb9fc3db1ce94af43699fd0814.jpg
+  Predicted: minions (confidence: 0.344)
+  Reason: low_confidence_0.34
+  Top-5:
+    1. minions: 0.344
+    2. musketeer: 0.293
+    3. knight: 0.133
+    4. mega_minion: 0.105
+    5. mini_pekka: 0.044
+
+crop_00297.png:
+  Source: screenshot_0053_IN_BATTLE_png.rf.4dcd6ccb9fc3db1ce94af43699fd0814.jpg
+  Predicted: giant (confidence: 0.757)
+  Reason: low_confidence_0.76
+  Top-5:
+    1. giant: 0.757
+    2. barbarians: 0.102
+    3. goblin_brawler: 0.088
+    4. mini_pekka: 0.025
+    5. goblins: 0.023
+
+crop_00298.png:
+  Source: screenshot_0053_IN_BATTLE_png.rf.4dcd6ccb9fc3db1ce94af43699fd0814.jpg
+  Predicted: barbarians (confidence: 0.934)
+  Reason: low_confidence_0.93
+  Top-5:
+    1. barbarians: 0.934
+    2. mini_pekka: 0.052
+    3. goblin_brawler: 0.004
+    4. giant: 0.003
+    5. goblins: 0.002
+
+crop_00299.png:
+  Source: screenshot_0069_IN_BATTLE_png.rf.bd2c6d7539f45a1e4da04ed9b7a4c38a.jpg
+  Predicted: mini_pekka (confidence: 0.913)
+  Reason: low_confidence_0.91
+  Top-5:
+    1. mini_pekka: 0.913
+    2. musketeer: 0.074
+    3. valkyrie: 0.006
+    4. knight: 0.003
+    5. minions: 0.002
+

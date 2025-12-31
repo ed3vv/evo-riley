@@ -59,8 +59,8 @@ class CardDetector:
                 - bbox: tuple (x1, y1, x2, y2) - bounding box coordinates
                 - center: tuple (x, y) - center point of the detection
         """
-        # Run inference
-        results = self.model(screenshot, conf=self.confidence_threshold, verbose=False)
+        # Run inference with higher resolution for better accuracy
+        results = self.model(screenshot, conf=self.confidence_threshold, imgsz=1280, verbose=False)
 
         detections = []
 
@@ -158,20 +158,24 @@ class CardDetector:
         if allies:
             print(f"\nAllies ({len(allies)}):")
             for d in allies:
+                # Show specific card name instead of generic class
+                card_label = f"{d['team']} - {d['card_type']}"
                 if d['grid']:
                     grid_row, grid_col = d['grid']
-                    print(f"  - {d['class_name']:20s} [Grid: {grid_row:2d},{grid_col:2d}] | conf: {d['confidence']:.2f}")
+                    print(f"  - {card_label:25s} [Grid: {grid_row:2d},{grid_col:2d}] | conf: {d['card_confidence']:.2f}")
                 else:
-                    print(f"  - {d['class_name']:20s} at ({d['center'][0]:3d}, {d['center'][1]:3d}) | conf: {d['confidence']:.2f}")
+                    print(f"  - {card_label:25s} at ({d['center'][0]:3d}, {d['center'][1]:3d}) | conf: {d['card_confidence']:.2f}")
 
         if enemies:
             print(f"\nEnemies ({len(enemies)}):")
             for d in enemies:
+                # Show specific card name instead of generic class
+                card_label = f"{d['team']} - {d['card_type']}"
                 if d['grid']:
                     grid_row, grid_col = d['grid']
-                    print(f"  - {d['class_name']:20s} [Grid: {grid_row:2d},{grid_col:2d}] | conf: {d['confidence']:.2f}")
+                    print(f"  - {card_label:25s} [Grid: {grid_row:2d},{grid_col:2d}] | conf: {d['card_confidence']:.2f}")
                 else:
-                    print(f"  - {d['class_name']:20s} at ({d['center'][0]:3d}, {d['center'][1]:3d}) | conf: {d['confidence']:.2f}")
+                    print(f"  - {card_label:25s} at ({d['center'][0]:3d}, {d['center'][1]:3d}) | conf: {d['card_confidence']:.2f}")
 
         print(f"{'='*60}\n")
 

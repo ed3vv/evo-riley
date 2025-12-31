@@ -1,0 +1,12 @@
+Unsorted Cards Extraction Summary
+================================================================================
+
+Total cards detected: 2194
+High confidence (>= 0.95): 1894
+Low confidence (< 0.95): 300
+
+Cards needing manual sorting: 300
+
+Confidence threshold: 0.95
+Detection model: models/best.pt
+Classifier model: models/card_classifier.pt

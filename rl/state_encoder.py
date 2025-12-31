@@ -134,20 +134,25 @@ class StateEncoder:
         # Using 4500 as safe upper bound to handle all towers
         max_hp = 4500.0
 
+        # Helper to safely get HP value (handle None)
+        def get_hp(tower_name):
+            hp = tower_hp.get(tower_name, 0.0)
+            return 0.0 if hp is None else float(hp)
+
         # Enemy towers
-        state[idx] = min(tower_hp.get('enemy_left_princess', 0.0), max_hp) / max_hp
+        state[idx] = min(get_hp('enemy_left_princess'), max_hp) / max_hp
         idx += 1
-        state[idx] = min(tower_hp.get('enemy_king', 0.0), max_hp) / max_hp
+        state[idx] = min(get_hp('enemy_king'), max_hp) / max_hp
         idx += 1
-        state[idx] = min(tower_hp.get('enemy_right_princess', 0.0), max_hp) / max_hp
+        state[idx] = min(get_hp('enemy_right_princess'), max_hp) / max_hp
         idx += 1
 
         # Ally towers (same normalization as enemy)
-        state[idx] = min(tower_hp.get('ally_left_princess', 0.0), max_hp) / max_hp
+        state[idx] = min(get_hp('ally_left_princess'), max_hp) / max_hp
         idx += 1
-        state[idx] = min(tower_hp.get('ally_king', 0.0), max_hp) / max_hp
+        state[idx] = min(get_hp('ally_king'), max_hp) / max_hp
         idx += 1
-        state[idx] = min(tower_hp.get('ally_right_princess', 0.0), max_hp) / max_hp
+        state[idx] = min(get_hp('ally_right_princess'), max_hp) / max_hp
         idx += 1
 
         return state

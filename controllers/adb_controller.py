@@ -52,9 +52,16 @@ class ADBController:
             result = self._run_adb_command(
                 f"shell input swipe {x1} {y1} {x2} {y2} {duration}"
             )
-            return result.returncode == 0
+            # Check both return code and stderr for errors
+            if result.returncode != 0:
+                print(f"  [ADB] ❌ Swipe failed with code {result.returncode}: {result.stderr}")
+                return False
+            # Also check if stderr contains error messages even with returncode 0
+            if result.stderr and len(result.stderr.strip()) > 0:
+                print(f"  [ADB] ⚠️  Swipe stderr: {result.stderr}")
+            return True
         except Exception as e:
-            print(f"Exception swiping: {e}")
+            print(f"  [ADB] ❌ Exception: {e}")
             return False
         
     def test_connection(self) -> bool:

@@ -16,8 +16,8 @@ import random
 
 
 def convert_templates_to_dataset(
-    template_dir: str = "detection/card_templates",
-    output_dir: str = "datasets/card_hand_classifier",
+    template_dir: str = "sorted",
+    output_dir: str = "sorted_for_training",
     train_split: float = 0.7,
     val_split: float = 0.2,
     test_split: float = 0.1
@@ -39,31 +39,22 @@ def convert_templates_to_dataset(
     for split in ['train', 'val', 'test']:
         (output_path / split).mkdir(parents=True, exist_ok=True)
 
-    # Group templates by card name
+    # Group templates by card name (from sorted/ directory structure)
     card_templates = {}
 
-    for file in os.listdir(template_path):
-        if not (file.endswith('.png') or file.endswith('.jpg')):
+    # Iterate through card folders in sorted/
+    for card_folder in template_path.iterdir():
+        if not card_folder.is_dir():
             continue
 
-        # Skip grayed out templates
-        if '_grayed' in file:
-            continue
+        card_name = card_folder.name
+        card_templates[card_name] = []
 
-        # Extract card name (remove variant number and extension)
-        base_name = file.replace('.png', '').replace('.jpg', '')
-
-        # Remove variant number (e.g., cannon_1 -> cannon)
-        if '_' in base_name and base_name.split('_')[-1].isdigit():
-            card_name = '_'.join(base_name.split('_')[:-1])
-        else:
-            card_name = base_name
-
-        # Add to card templates dict
-        if card_name not in card_templates:
-            card_templates[card_name] = []
-
-        card_templates[card_name].append(template_path / file)
+        # Collect all images from this card folder
+        for img_file in card_folder.glob('*.png'):
+            card_templates[card_name].append(img_file)
+        for img_file in card_folder.glob('*.jpg'):
+            card_templates[card_name].append(img_file)
 
     print(f"Found {len(card_templates)} unique cards")
     print(f"Total template images: {sum(len(imgs) for imgs in card_templates.values())}")
